@@ -1,0 +1,29 @@
+
+body    {
+    background-image:url("chequered-flag.jpg");
+   /* background-attachment:fixed;*/
+    color:white;
+}
+
+div #info   {
+    position:relative;
+    height:100px;
+    width:100px;
+    /*top:100px;
+    left:100px;*/
+    border-style:solid;
+    border-color:white;
+    border-width:1px;
+   
+}
+
+div #inner  {
+    position:absolute;
+    height:100px;
+    width:100px;
+    top:200px;
+    left:200px;
+    /*border-style:solid;
+    border-color:white;
+    border-width:1px;*/
+}

@@ -1,0 +1,188 @@
+body    {
+    
+    background-image:url("chequered-flag.png");
+    background-repeat:no-repeat;
+    /*background-attachment:fixed;*/
+    background-position:right top;
+    background-color:white;
+    z-index:-1;
+}
+
+div #images {
+    position:relative;
+    top:0px;
+    left:0px;
+    border-color:black;
+    border-style:solid;
+    height:10px;
+    width:250px;
+}
+img#logo   {
+    position:absolute;
+    height:610px;
+    width:1350px;
+    opacity:0.5;
+    left:-310px;
+    top:-310px;
+    float:left;
+    
+    border-radius:8px;
+}
+
+div #cars    {
+    position:absolute;
+    top:150px;
+    height:20px;
+    width:40px;
+    left:0px;
+    border-color:black;
+    opacity:1.0;
+    z-index:-1;
+    
+}
+
+div #cars img   {
+    height:80px;
+    width:220px;
+    opacity:0.6;
+    
+}
+div #merc   {
+    position:absolute;
+    top:50px;
+    left:-15x;
+    opacity:1.0;
+    z-index:-1;
+    height:20px;
+    width:40px;
+    
+}
+div #merc img    {
+    
+    height:55px;
+    width:220px;
+    
+}
+
+/*@keyframes animate    {
+    0%  {left:10px;}
+    5% {left:30px;}
+    10% {left:50px;}
+    15% {left:70px;}
+    20% {left:90px;}
+    25% {left:110px;}
+    30% {left:130px;}
+    35% {left:150px;}
+    40% {left:170px;}
+    50% {left:190px;}
+    60% {left:210px;}
+    70% {left:230px;}
+    80% {left:250px;}
+    90% {left:270px;}
+    100% {left:290px;}
+}*/
+
+
+
+div #outer  {
+    position:relative;
+    height:200px;
+    width:200px;
+    border-style:solid;
+    border-radius:2px;
+    top:1800px;
+    left:20px;
+    /*margin-top:320px;
+    margin-left:20px;*/
+} 
+
+div #inner  {
+    position:absolute;
+    /*float:center;*/
+    top:790px;
+    left:500px;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    border-radius:2px;
+    padding:50px;
+}
+
+div #inner h3   {
+    top:20px;
+    left:20px;
+}
+div #logo{
+    position:relative;
+    margin-top:300px;
+    margin-left:300px;
+}
+form #forrm {
+    position:relative;
+    margin-top:300px;
+    margin-left:300px;
+}
+
+div #schedule   {
+    background-color:grey;
+    top:675px;
+    left:1091px;
+    position:absolute;
+    border-top-color:black;
+    border-color:black;
+    border-style:solid;
+    border-radius:10px;
+    border-width:1px;
+    border-bottom-color:white;
+    border-right-color:white;
+    height:600px;
+    width:255px;
+}
+
+div #schedule h4    {
+    position:absolute;
+    top:5px;
+    left:40%;
+}
+
+div #schedule ul    {
+    position:absolute;
+    top:50px;
+}
+
+div #schedule ul li {
+    font-family:Georgia;
+    font-size:1em;
+    color:orange;
+    position:relative;
+    left:30%;
+    margin:10px;
+}
+
+div #continue {
+    position:absolute;
+    top:540px;
+    left:50%;
+    border-width:1px;
+    padding:4px 30px 4px 30px;
+    border-color:black;
+    border-style:solid;
+    z-index:1;
+    border-radius:5px;
+    /*background-color:white;*/
+}
+
+a:link {
+    color:black;
+    
+}
+a:hover  {
+    padding:4px 40px 4px 40px;
+    color:black;
+    /*background-color:black;*/
+}
+
+ a:click   {
+    color:black;
+    background-color:white;
+}
