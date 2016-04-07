@@ -1,0 +1,46 @@
+create database dbms;
+use dbms;
+
+create table drivers(
+	driver_id int,
+	driver_name varchar(20),
+	driver_team varchar(20),
+	driver_type varchar(20),
+	PRIMARY KEY (driver_id)
+);
+
+create table gp(
+	gp_name varchar(20),
+	gp_year int,
+	gp_location varchar(20),
+	session_id varchar(20),
+	PRIMARY KEY(session_id)
+);
+
+create table users(
+	username varchar(20),
+	user_name varchar(50),
+	points int
+);
+
+create table practice_sessions(
+	position int,
+	driver_id int,
+	lap_time varchar(20),
+	gap varchar(20),
+	laps int,
+	session_id varchar(20),
+	fuel load int,
+	tyre type varchar(20)
+	PRIMARY KEY (driver_id, session_id)
+);
+
+create table races(
+	position int,
+	driver_name varchar(20),
+	time varchar(20),
+	laps int
+);
+
+
+//Add driver id column to races table
