@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Race Predictor Challenge</title>
-    <link type="text/css" rel="stylesheet" href="home_pre.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/home_pre.css"/>
+</head>
+
+
 <body>
     <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
     <!--<div id="backg">
     </div>-->
     <div id="images">
-        <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
-        <div id="cars" onload="mainfunc()"><img src="ferrari.jpg"  ></img></div>
-        <div id="merc"><img src="mercedes.png" id="merc"></img></div>
+        <img src="../images/racingline.jpg" id="logo" alt="Image could not be displayed"></img>
+        <div id="../images/cars" onload="mainfunc()"><img src="ferrari.jpg"  ></img></div>
+        <div id="../images/merc">
+        <img src="../images/mercedes.png" id="merc"></img></div>
         <a href="#outer"><div id = "continue">
             <p>Continue</p>
         </div></a>
     </div>
+
     <div id = "outer">
         
         <div id="schedule">
