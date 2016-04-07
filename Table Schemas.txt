@@ -18,9 +18,10 @@ create table gp(
 );
 
 create table users(
-	username varchar(20),
+	email_id varchar(20),
 	user_name varchar(50),
-	points int
+	points int,
+	PRIMARY KEY (email_id);
 );
 
 create table practice_sessions(
