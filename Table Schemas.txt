@@ -21,7 +21,7 @@ create table users(
 	email_id varchar(20),
 	user_name varchar(50),
 	points int,
-	PRIMARY KEY (email_id);
+	PRIMARY KEY (email_id)
 );
 
 create table practice_sessions(
@@ -31,8 +31,8 @@ create table practice_sessions(
 	gap varchar(20),
 	laps int,
 	session_id varchar(20),
-	fuel load int,
-	tyre type varchar(20)
+	fuel_load int,
+	tyre_type varchar(20),
 	PRIMARY KEY (driver_id, session_id)
 );
 
