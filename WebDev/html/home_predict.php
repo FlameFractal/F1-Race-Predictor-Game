@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Race Predictor Challenge</title>
-    <link type="text/css" rel="stylesheet" href="../css/home_pre.css"/>
-</head>
-
-
+    <link type="text/css" rel="stylesheet" href="home_pre.css"/>
 <body>
     <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
     <!--<div id="backg">
     </div>-->
     <div id="images">
-        <img src="../images/racingline.jpg" id="logo" alt="Image could not be displayed"></img>
-        <div id="../images/cars" onload="mainfunc()"><img src="ferrari.jpg"  ></img></div>
-        <div id="../images/merc">
-        <img src="../images/mercedes.png" id="merc"></img></div>
+        <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
+        <div id="cars" onload="mainfunc()()"><img src="ferrari.jpg"  ></img></div>
+        <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
         <a href="#outer"><div id = "continue">
             <p>Continue</p>
         </div></a>
     </div>
-
     <div id = "outer">
         
         <div id="schedule">
@@ -47,18 +41,20 @@
         </div>
         <div id = "inner">
         <h3 id="log">Login/Signup</h3>
-        <form action="welcome.php" id = "forrm" method="post">
-        Email:<input type="text" name="email"></input><br/>
+        
+        <form name="myform" action="welcome.php" id = "forrm" method="post" onsubmit="return validate_form()">
+        Email:<input type="text" name="email"></input><br/><span style="visibility:hidden">Email required!</span>
        
         <br/>
         <br/>
-        Password:<input type="password" name="pass"></input>
+        Password:<input type="password" name="pass"></input><span style="visibility:hidden">Password required!</span>
         <br/>
         <br/>
         <br/>
         <input type="submit"></input>
         <!--<button onclick="myFunction()">Submit</button>-->
         </form>
+        <a href="signup_form.php">Signup</a>
         </div>
     </div>
    
@@ -71,26 +67,57 @@
         
         function mainfunc() {
             var pos=document.getElementById("cars");
+            var elem=document.getElementById("merc");
             var i=0;
+            var temp=0;
+            elem.style.animationDelay="2s";
             var id=setInterval(moving,1);
             //mainfunc();
             //window.alert("I now is:"+i);
             function moving()   {
                 
-                if(i==1100) {
+                if(i==1200) {
                     clearInterval(id);
                     document.getElementById("cars").style.visibility="hidden";
+                    document.getElementById("merc").style.visibility="hidden";
                 }
                 else    {
                     i=i+1;
                     //window.alert(i);
                     var val=Number(pos.style.left);
+                    val=val+i;
                     pos.style.left=i+"px";
+                    elem.style.left=i+"px";
                     //window.alert(typeof pos.style.left);
                 }
             }
         }
+        /*var pos=0;
+        function animation()    {
+            window.alert("Inside the animation function");
+            pos+=1;
+            document.getElementById("cars").style.left=pos+"px";
+            window.requestAnimationFrame(animation);
+        }
+        window.requestAnimationFrame(animation);*/
     </script>
+    <script>
+        function validate_form()    {
+            var email=document.forms["myform"]["email"].value;
+            var pass=document.forms["myform"]["pass"].value;
+            if(email==null||email=="")  {
+                //alert("Email required!");
+                document.getElementsByTagName("span")[0].style.visibility="visible";
+                return false;
+            }
+            else if(pass==null||pass=="")   {
+                document.getElementsByTagName("span")[1].style.visibility="visible";
+                //alert("Password required!");
+                return false;
+            }                
+        }
+    </script>
+
     </body>
 </head>
 </html>
