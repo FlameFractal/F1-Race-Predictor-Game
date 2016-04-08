@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Sign Up</title>
-        <link type="text/css" rel="stylesheet" href="signup_style.css"/>
+        <link type="text/css" rel="stylesheet" href="../css/signup_style.css"/>
     </head>
     <body>
         <div>
@@ -10,7 +10,7 @@
                     $servername="localhost";
                     $username="root";
                     $password="password";
-                    $database="login";
+                    $database="dbms";
                     $t=time();
                     $id=NULL;
                     $conn=mysqli_connect($servername,$username,$password,$database);

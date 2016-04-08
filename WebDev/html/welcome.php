@@ -1,7 +1,7 @@
 <html>
 <head>
     <title></title>
-    <link type="text/css" rel="stylesheet" href="welcome_page.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/welcome_page.css"/>
 </head>
 <body>
     
@@ -13,9 +13,9 @@
     <?php
         $incorrect=FALSE;
         $servername="localhost";
-        $name="samin";
-        $password="tiger";
-        $database="login";
+        $name="root";
+        $password="password";
+        $database="dbms";
         $conn=new mysqli($servername,$name,$password,$database);
         if($conn->connect_error)    {
             die("Connection failed:".$conn->connect_error);
@@ -33,7 +33,7 @@
             if(mysqli_num_rows($result)==0)  {
                 echo "<br/>You're not a user, please sign-up";
                 echo "<div id =\"signup\">
-                        <a href=\"sign_form.php\">Sign up for an account</a>
+                        <a href=\"signup_form.php\">Sign up for an account</a>
                 </div>";
                 echo mysqli_error($conn);
             }

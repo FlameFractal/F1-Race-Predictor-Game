@@ -1,6 +1,6 @@
 
 body    {
-    background-image:url("chequered-flag.jpg");
+    background-image:url("../images/chequered-flag.jpg");
     background-attachment:fixed;
     color:white;
     background-repeat:repeat-y;
