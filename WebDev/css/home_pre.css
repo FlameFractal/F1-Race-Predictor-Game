@@ -1,40 +1,42 @@
 body    {
     
-    background-image:url("chequered-flag.png");
+    /*background-image:url("chequered-flag.png");*/
     background-repeat:no-repeat;
     /*background-attachment:fixed;*/
     background-position:right top;
     background-color:white;
     z-index:-1;
+    zoom:100%;
 }
 
 div #images {
+    /*display:block;*/
     position:relative;
     top:0px;
     left:0px;
     border-color:black;
     border-style:solid;
-    height:10px;
-    width:250px;
+    
+    width:100%;
 }
 img#logo   {
     position:absolute;
-    height:610px;
-    width:1350px;
+    /*height:30em;
+    width:84em;*/
+    width:102%;
     opacity:0.5;
     left:-310px;
     top:-310px;
-    float:left;
     
-    border-radius:8px;
+    
+    /*border-radius:8px;*/
 }
 
 div #cars    {
     position:absolute;
-    top:150px;
-    height:20px;
-    width:40px;
-    left:0px;
+    top:25%;
+    width:20%;
+    left:0%;
     border-color:black;
     opacity:1.0;
     z-index:-1;
@@ -43,25 +45,49 @@ div #cars    {
 
 div #cars img   {
     height:80px;
-    width:220px;
+    width:100%;
     opacity:0.6;
     
 }
 div #merc   {
     position:absolute;
-    top:50px;
-    left:-15x;
+    top:10%;
+    left:-45%;
     opacity:1.0;
     z-index:-1;
-    height:20px;
-    width:40px;
+    width:20%;
     
 }
 div #merc img    {
     
-    height:55px;
-    width:220px;
+    width:100%;
     
+}
+
+div #williams   {
+    position:absolute;
+    top:40%;
+    left:-30%;
+    opacity:1.0;
+    z-index:-1;
+    width:20%;
+}
+
+div #williams img   {
+    width:100%;
+}
+
+div #redbull    {
+    position:absolute;
+    top:50%;
+    left:-40%;
+    opacity:0.9;
+    z-index:-1;
+    width:20%;
+}
+
+div #redbull img    {
+    width:100%;
 }
 
 /*@keyframes animate    {
@@ -83,14 +109,23 @@ div #merc img    {
 }*/
 
 
-
+div #continue{
+    position:absolute;
+    top:20%;
+    left:20%;
+    
+    margin-left:25px;
+    margin-top:50px;
+}
 div #outer  {
-    position:relative;
+    /*position:relative;*/
+    float:center;
     height:200px;
     width:200px;
     border-style:solid;
+    border-color:black;
     border-radius:2px;
-    top:1800px;
+    top:100%;
     left:20px;
     /*margin-top:320px;
     margin-left:20px;*/
@@ -99,8 +134,9 @@ div #outer  {
 div #inner  {
     position:absolute;
     /*float:center;*/
-    top:790px;
-    left:500px;
+    width:300px;
+    top:130%;
+    left:40%;
     border-style:solid;
     border-color:black;
     border-width:1px;
@@ -109,13 +145,13 @@ div #inner  {
 }
 
 div #inner h3   {
-    top:20px;
-    left:20px;
+    top:5%;
+    left:5%;
 }
-div #logo{
+div #logo   {
     position:relative;
-    margin-top:300px;
     margin-left:300px;
+    margin-top:300px;
 }
 form #forrm {
     position:relative;
@@ -125,9 +161,10 @@ form #forrm {
 
 div #schedule   {
     background-color:grey;
-    top:675px;
-    left:1091px;
+    top:120%;
+    left:0%;
     position:absolute;
+    float:right;
     border-top-color:black;
     border-color:black;
     border-style:solid;
@@ -135,24 +172,26 @@ div #schedule   {
     border-width:1px;
     border-bottom-color:white;
     border-right-color:white;
-    height:600px;
-    width:255px;
+    height:90%;
+    width:20%;
+    overflow:auto;
 }
 
 div #schedule h4    {
     position:absolute;
-    top:5px;
-    left:40%;
+    top:4%;
+    left:35%;
 }
 
 div #schedule ul    {
     position:absolute;
-    top:50px;
+    float:left;
+    top:10%;
 }
 
 div #schedule ul li {
     font-family:Georgia;
-    font-size:1em;
+    font-size:15px;
     color:orange;
     position:relative;
     left:30%;

@@ -11,6 +11,8 @@
         <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
         <div id="cars" onload="mainfunc()()"><img src="ferrari.jpg"  ></img></div>
         <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
+        <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
+        <div id="redbull" onload="mainfunc2()"><img src="redbull.jpg" id="redbull"></img></div>
         <a href="#outer"><div id = "continue">
             <p>Continue</p>
         </div></a>
@@ -69,25 +71,26 @@
             var pos=document.getElementById("cars");
             var elem=document.getElementById("merc");
             var i=0;
-            var temp=0;
-            elem.style.animationDelay="2s";
+            
+            
             var id=setInterval(moving,1);
             //mainfunc();
             //window.alert("I now is:"+i);
             function moving()   {
                 
-                if(i==1200) {
+                if(8*i==2200) {
                     clearInterval(id);
                     document.getElementById("cars").style.visibility="hidden";
+                    elem.style.animationDelay="1s";
                     document.getElementById("merc").style.visibility="hidden";
-                }
+                    
+                 }
                 else    {
                     i=i+1;
                     //window.alert(i);
-                    var val=Number(pos.style.left);
-                    val=val+i;
-                    pos.style.left=i+"px";
-                    elem.style.left=i+"px";
+                    pos.style.left=(4*i)+"px";
+                    elem.style.left=(3.5*i)+"px";
+                    
                     //window.alert(typeof pos.style.left);
                 }
             }
@@ -117,6 +120,30 @@
             }                
         }
     </script>
+    <script>
+        window.onload=mainfunc2();
+        function mainfunc2()    {
+            var element=document.getElementById("williams");
+            var red=document.getElementById("redbull");
+            element.style.animationDelay="1s";
+            red.style.animationDelay="2s";
+            var i=0;
+            var id=setInterval(moving,1);
+            function moving()   {
+                if(6*i==2880)   {
+                    clearInterval(id);
+                    element.style.visibility="hidden";
+                    red.style.visibility="hidden";
+                }
+                else    {
+                    i=i+1;
+                    element.style.left=(2.5*i)+"px";
+                    red.style.left=(2*i)+"px";
+                }
+            }
+        }
+    </script>
+    
 
     </body>
 </head>

@@ -2,3 +2,18 @@ body    {
     background-image:url("chequered-flag.jpg");
     color:white;
 }
+
+div #success    {
+    position:absolute;
+    top:30%;
+    left:40%;
+    border-style:none;
+    border-color:red;
+    padding:20px;
+}
+
+div #success h3     {
+    font-family:"Courier New";
+    
+}
+

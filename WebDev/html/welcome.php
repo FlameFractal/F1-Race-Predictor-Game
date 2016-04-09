@@ -12,34 +12,39 @@
     
     <?php
         $incorrect=FALSE;
+        $email=$_POST["email"];
+        $pass=$_POST["pass"];
+        if(empty($email)&&empty($pass)) {
+            header("Location:home_predict.php");
+        }
         $servername="localhost";
-        $name="samin";
+        $name="root";
         $password="tiger";
-        $database="login";
+        $database="dbms";
         $conn=new mysqli($servername,$name,$password,$database);
         if($conn->connect_error)    {
             die("Connection failed:".$conn->connect_error);
         }
         else    {
             //echo "Connection successful";
-            $email=$_POST["email"];
-            $password=$_POST["pass"];
-            $sql="select * from `users` WHERE Email='".$email."';";
+            
+            $sql="select * from `users` WHERE email_id='".$email."';";
             
             //echo '<br/>'.$sql;
             $result=mysqli_query($conn,$sql);
-            //$result1=mysqli_query($conn,"select * from 'users' where Email='samin_rooney@yahoo.co.in'");
+            //echo mysqli_num_rows($result);
+            //$result1=mysqli_query($conn,"select * from 'users' where email_id='samin_rooney@yahoo.co.in'");
             
             if(mysqli_num_rows($result)==0)  {
                 echo "<br/>You're not a user, please sign-up";
                 echo "<div id =\"signup\">
-                        <a href=\"sign_form.php\">Sign up for an account</a>
+                        <a href=\"signup_form.php\">Sign up for an account</a>
                 </div>";
                 echo mysqli_error($conn);
             }
             else{
                 
-                $sql1="select * from `users` WHERE Email='".$email."' AND Password='".$password."';";
+                $sql1="select * from `users` WHERE email_id='".$email."' AND password='".$pass."';";
                 $result=mysqli_query($conn,$sql1);
                 if(mysqli_num_rows($result)==0) {
                     $incorrect=TRUE;
@@ -50,7 +55,7 @@
                 }
                 else    {
                     while($rows=mysqli_fetch_assoc($result))   {
-                    echo "<h2>Welcome, ".$rows["Name"]."</h2>";
+                    echo "<h2>Welcome, ".$rows["user_name"]."</h2>";
                     }
                 }
             }

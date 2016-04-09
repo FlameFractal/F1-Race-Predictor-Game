@@ -7,10 +7,16 @@
         <div>
             <div>
                 <?php
+                    $name=$_POST["name"];
+                    $email=$_POST["email"];
+                    $pass=$_POST["password"];
                     $servername="localhost";
+                    if(empty($name)&&empty($email)&&empty($pass))   {
+                        header("Location:signup_form.php");
+                    }
                     $username="root";
-                    $password="password";
-                    $database="login";
+                    $password="tiger";
+                    $database="dbms";
                     $t=time();
                     $id=NULL;
                     $conn=mysqli_connect($servername,$username,$password,$database);
@@ -19,11 +25,9 @@
                     }
                     else    {
                           
+                        $point=0;
                         
-                        $name=$_POST["name"];
-                        $email=$_POST["email"];
-                        $password=$_POST["password"];
-                        $sql="insert into `users` values ('".$name."','".$email."','".$password."',CURRENT_TIMESTAMP);";
+                        $sql="insert into `users` values ('".$email."','".$name."','".$pass."',".$point.",CURRENT_TIMESTAMP);";
                         //echo $sql;
                         $result=mysqli_query($conn,$sql);
                         if(!$result) {
@@ -31,8 +35,15 @@
                             echo mysqli_error($conn);
                         }
                         else    {
-                            echo "Successful :)";
-                        
+                            echo "<div id=\"success\">
+                                        <h3>Successful :)<h3>
+                                        <a href=\"home_predict.php\">
+                                            <div id=\"login\">
+                                                Login
+                                            </div>
+                                        </a>    
+                                  </div> ";     
+                            
                         }
                             
                     }
