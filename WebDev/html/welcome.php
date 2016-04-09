@@ -1,7 +1,7 @@
 <html>
 <head>
     <title></title>
-    <link type="text/css" rel="stylesheet" href="welcome_page.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/welcome_page.css"/>
 </head>
 <body>
     
