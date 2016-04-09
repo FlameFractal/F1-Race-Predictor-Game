@@ -1,12 +1,11 @@
 body    {
-    
+
     /*background-image:url("chequered-flag.png");*/
     background-repeat:no-repeat;
     /*background-attachment:fixed;*/
-    background-position:right top;
+    /*background-position:right top;*/
     background-color:white;
     z-index:-1;
-    zoom:100%;
 }
 
 div #images {
@@ -59,7 +58,7 @@ div #merc   {
     
 }
 div #merc img    {
-    
+
     width:100%;
     
 }
@@ -106,27 +105,20 @@ div #redbull img    {
     80% {left:250px;}
     90% {left:270px;}
     100% {left:290px;}
-}*/
+    }*/
 
 
-div #continue{
-    position:absolute;
-    top:20%;
-    left:20%;
-    
-    margin-left:25px;
-    margin-top:50px;
-}
-div #outer  {
-    /*position:relative;*/
-    float:center;
-    height:200px;
-    width:200px;
-    border-style:solid;
-    border-color:black;
-    border-radius:2px;
-    top:100%;
-    left:20px;
+
+    div #outer  {
+        /*position:relative;*/
+        float:center;
+        height:200px;
+        width:200px;
+        border-style:solid;
+        border-color:black;
+        border-radius:2px;
+        top:100%;
+        left:20px;
     /*margin-top:320px;
     margin-left:20px;*/
 } 
@@ -198,30 +190,70 @@ div #schedule ul li {
     margin:10px;
 }
 
-div #continue {
+div #continue{
     position:absolute;
-    top:540px;
-    left:50%;
-    border-width:1px;
+    top:70%;
+    left:45%;
+    margin-left:25px;
+    margin-top:50px;
     padding:4px 30px 4px 30px;
-    border-color:black;
-    border-style:solid;
     z-index:1;
-    border-radius:5px;
-    /*background-color:white;*/
 }
 
+a:link, a:visited {
+    font-size: 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+input[type="submit"], #signup{
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+input[type="submit"]:hover, #signup:hover{
+    background-color: #008CBA;
+}
+
+input[type="submit"], #signup{
+    font-family: "Arial";
+}
+
+form li{
+    list-style: none;
+}
+
+label{
+    display: block;
+}
+
+form ul{
+    padding-left: 0;
+}
+/*
 a:link {
-    color:black;
+    color:blue;
+    text-decoration: none;
     
 }
 a:hover  {
-    padding:4px 40px 4px 40px;
+   // padding:4px 40px 4px 40px;
     color:black;
-    /*background-color:black;*/
 }
 
  a:click   {
     color:black;
-    background-color:white;
-}
+}*/

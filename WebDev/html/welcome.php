@@ -19,7 +19,7 @@
         }
         $servername="localhost";
         $name="root";
-        $password="tiger";
+        $password="password";
         $database="dbms";
         $conn=new mysqli($servername,$name,$password,$database);
         if($conn->connect_error)    {
@@ -55,7 +55,7 @@
                 }
                 else    {
                     while($rows=mysqli_fetch_assoc($result))   {
-                    echo "<h2>Welcome, ".$rows["user_name"]."</h2>";
+                    echo "<h2>Welcome, ".$rows["name"]."</h2>";
                     }
                 }
             }
