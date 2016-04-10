@@ -1,0 +1,71 @@
+body    {
+    background-image:url("chequered-flag.jpg");
+}
+
+h2  {
+    position:absolute;
+    left:38%;
+    text-align:center;
+    color:white;
+}
+
+div#practice_sessions ul  {
+    position:absolute;
+    list-style-type:none;
+    top:20%;
+    left:30%;
+}
+
+div#practice_sessions ul a{
+    color:white;
+    border-style:inset outset outset inset;
+    border-color:red;
+    border-radius:5px;
+    margin:20px;
+    padding:20px;
+    text-decoration:none;
+}
+div#practice_sessions ul a li   {
+    display:inline;
+}
+div#practice_sessions ul a:hover {
+    background-color:white;
+    border-color:black;
+    color:red;
+}
+div#practice_table {
+    position:absolute;
+    top:40%;
+    left:33%;
+}
+div#practice_table table {
+    border-style:inset outset outset inset;
+    border-color:red;
+    border-radius:5px;
+    background-color:black;
+    opacity:0.9;
+}
+
+div#practice_table h4   {
+    color:white;
+    font-family:"Courier New";
+    
+}
+
+div#practice_table table thead th  {
+    color:red;
+    padding:10px;
+    text-align:center;
+}
+
+div#practice_table table tbody tr td    {
+    color:white;
+    padding:10px 15px 10px 15px;
+    text-align:center;
+}
+
+div#predict {
+    position:absolute;
+    color:white;
+    
+}

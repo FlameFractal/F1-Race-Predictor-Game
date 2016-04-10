@@ -7,21 +7,26 @@
     <div>
         <div id="menu">
             <ul>
-                <li>
+                <a href="<?php echo "prediction.php?race=".$_GET['race']."&win=Winner";?>"><li>
                     
                     Winner
                     
                 </li>
+                </a>
+                <a href="<?php echo "prediction.php?race=".$_GET['race']."&win=Podium";?>">
                 <li>
                     
                     Podium Finish
                     
                 </li>
+                </a>
+                <a href="<?php echo "prediction.php?race=".$_GET['race']."&win=Topten";?>">
                 <li>
                     
                     Top Ten
                     
                 </li>
+                </a>
                 
                 
             </ul>
