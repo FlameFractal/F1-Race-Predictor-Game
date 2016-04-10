@@ -10,13 +10,16 @@
                     $name=$_POST["name"];
                     $email=$_POST["email"];
                     $pass=$_POST["password"];
-                    $servername="localhost";
-                    if(empty($name)&&empty($email)&&empty($pass))   {
-                        header("Location:signup_form.php");
-                    }
+
                     $username="root";
                     $password="password";
                     $database="dbms";
+                    $servername="localhost";
+                    
+                    if(empty($name)&&empty($email)&&empty($pass))   {
+                        header("Location:signup_form.php");
+                    }
+
                     $t=time();
                     $id=NULL;
                     $conn=mysqli_connect($servername,$username,$password,$database);
@@ -37,7 +40,7 @@
                         else    {
                             echo "<div id=\"success\">
                                         <h3>Successful :)<h3>
-                                        <a href=\"home_predict.php\">
+                                        <a href=\"index.php\">
                                             <div id=\"login\">
                                                 Login
                                             </div>
