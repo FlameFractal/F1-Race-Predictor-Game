@@ -25,6 +25,15 @@ create table users(
 	PRIMARY KEY (email_id)
 );
 
+
+create table users(
+    Name varchar(20),
+    Email varchar(30),
+    Password varchar(20),
+    reg_date TIMESTAMP,
+    PRIMARY KEY(Email)
+    );
+
 create table practice_sessions(
 	position int,
 	driver_id int,

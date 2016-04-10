@@ -47,14 +47,12 @@
                         <label>Email:</label>
                         <input type="text" name="email"></input>
                         <br>
-                        <!-- <span style="visibility:hidden">Email required!</span> -->
                     </li>
                     <br>
                     <li>
                         <label>Password:</label>
                         <input type="password" name="pass"></input>
                         <br>
-                        <!-- <span style="visibility:hidden">Password required!</span>     -->
                     </li>
                     <br>
                     <li>
@@ -89,6 +87,9 @@
                     pos.style.left=(4*i)+"px";
                     elem.style.left=(3.5*i)+"px";
                 }
+                else if  {
+
+                }
             }
         }
     </script>
@@ -98,11 +99,9 @@
             var pass=document.forms["myform"]["pass"].value;
             if(email==null||email=="")  {
                 alert("Email required!");
-                //document.getElementsByTagName("span")[0].style.visibility="visible";
                 return false;
             }
             else if(pass==null||pass=="")   {
-                //document.getElementsByTagName("span")[1].style.visibility="visible";
                 alert("Password required!");
                 return false;
             }                
