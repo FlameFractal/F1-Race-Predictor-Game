@@ -10,12 +10,12 @@ div div#menu    {
 }
 
 div div#menu ul  {
-   
+
     list-style-type:none;
 }
 
 div div#menu ul li {
-    
+
     display:inline;
     border-style:inset outset outset inset;
     border-color:red;
@@ -43,16 +43,24 @@ div div#circuit div {
     width:400px;
 }
 
-div div#circuit div img {
+div div#circuit div img{
+ display: block;
+ max-width:800px;
+ max-height:800px;
+ width: auto;
+ height: auto;
+}
+
+/*div div#circuit div img {
     position:absolute;
     top:15%;
     height:400px;
     width:600px;
-}
-div div#circuit div h3  {
-    position:absolute;
-    left:5%;
-    color:white;
-    font-family:"Courier New";
-}
+    }*/
+    div div#circuit div h3  {
+        position:absolute;
+        left:5%;
+        color:white;
+        font-family:"Courier New";
+    }
 

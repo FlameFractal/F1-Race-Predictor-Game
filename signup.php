@@ -13,7 +13,7 @@
                     $pass=$_POST["password"];
                     $servername="localhost";
                     if(empty($name)&&empty($email)&&empty($pass))   {
-                        header("Location:signup_form.php");
+                        header("location:signup_form.php");
                     }
                     $username="root";
                     $password="tiger";

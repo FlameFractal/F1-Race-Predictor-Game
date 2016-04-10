@@ -28,12 +28,10 @@
         </div>
         <div id="circuit">
         <?php
-        /*$url="http://localhost/learner/DBMS/welcome.php";
-        $html=file_get_contents($url);
-        $doc=new DOMDocument();
-        @$doc->loadHTML($html);
-        $tag=$doc->getElementsByTagName("img");
-        */
+        session_start();
+        if(!$_SESSION['user_name']){
+            header("location:home_predict.php");
+        }
         $tag=$_GET['race'];
         echo $tag;      
         switch($tag)    {
@@ -92,6 +90,7 @@
                             echo "
                                     <div>
                                         <h3>Spa Francorchamps</h3>
+                                        <br>
                                         <img src=\"spa.png\"></img>
                                     </div>";
                             break;

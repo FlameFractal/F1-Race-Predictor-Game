@@ -3,88 +3,86 @@
 <head>
     <title>Race Predictor Challenge</title>
     <link type="text/css" rel="stylesheet" href="home_pre.css"/>
-<body>
-    <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
+    <body>
+        <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
     <!--<div id="backg">
-    </div>-->
-    <div id="images">
-        <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
-        <div id="cars" onload="mainfunc()()"><img src="ferrari.jpg"  ></img></div>
-        <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
-        <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
-        <div id="redbull" onload="mainfunc2()"><img src="redbull.jpg" id="redbull"></img></div>
-        <a href="#outer"><div id = "continue">
-            <p>Continue</p>
-        </div></a>
+</div>-->
+<div id="images">
+    <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
+    <div id="cars" onload="mainfunc()()"><img src="ferrari.jpg"  ></img></div>
+    <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
+    <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
+    <div id="redbull" onload="mainfunc2()"><img src="redbull.jpg" id="redbull"></img></div>
+    <a id="continue" href="#outer">Continue</a>
+</div>
+<div id = "outer">
+
+    <div id="schedule">
+        <h1>Schedule</h1>
+        <ol>
+            <li>Australian GP</li>
+            <li>Malaysian GP</li>
+            <li>Bahrain GP</li>
+            <li>Chinese GP</li>
+            <li>Monaco GP</li>
+            <li>Canadian GP</li>
+            <li>British GP</li>
+            <li>Belgian GP</li>
+            <li>Singapore GP</li>
+            <li>Russian GP</li>
+            <li>Japanese GP</li>
+            <li>US GP</li>
+        </ol>
     </div>
-    <div id = "outer">
+    <div id = "inner">
+        <h3 id="log">Sign in to your account!</h3>
         
-        <div id="schedule">
-                <h4>Schedule</h4>
-                <ul type="none">
-                    <li>Australian GP</li>
-                    <li>Malaysian GP</li>
-                    <li>Bahrain GP</li>
-                    <li>Chinese GP</li>
-                    <li>Spanish GP</li>
-                    <li>Monaco GP</li>
-                    <li>Canadian GP</li>
-                    <li>Austrian GP</li>
-                    <li>British GP</li>
-                    <li>Hungarian GP</li>
-                    <li>Belgian GP</li>
-                    <li>Italian GP</li>
-                    <li>Singapore GP</li>
-                    <li>Japanese GP</li>
-                    <li>US GP</li>
-                    <li>Brazilian GP</li>
-                    <li>Abu Dhabi GP</li>
-                </ul>
-        </div>
-        <div id = "inner">
-        <h3 id="log">Login/Signup</h3>
-        
-        <form name="myform" action="welcome.php" id = "forrm" method="post" onsubmit="return validate_form()">
-        Email:<input type="text" name="email"></input><br/><span style="visibility:hidden">Email required!</span>
-       
-        <br/>
-        <br/>
-        Password:<input type="password" name="pass"></input><span style="visibility:hidden">Password required!</span>
-        <br/>
-        <br/>
-        <br/>
-        <input type="submit"></input>
-        <!--<button onclick="myFunction()">Submit</button>-->
+        <form name="myform" action="login.php" id = "forrm" method="post" onsubmit="return validate_form()">
+            <ul>
+                <li>    
+                    <label>Email:</label>
+                    <input type="text" name="email"></input>
+                    <span style="visibility:hidden">Email required!</span>
+                    <br>
+                </li>
+                <br>
+                <li>
+                    <label>Password:</label>
+                    <input type="password" name="pass"></input>
+                    <span style="visibility:hidden">Password required!</span>
+                    <br>
+                </li>
+                <br>
+                <li>
+                    <input type="submit" value="Log In"></input>
+                    <a id="signup" href="signup.php">Sign Up!</a>
+                </li>
+            </ul>
         </form>
-        <a href="signup_form.php">Signup</a>
-        </div>
     </div>
-   
-    <script>
-        //window.alert("Welcome User!");
-        //window.alert("Hello");
-        //mainfunc();
-        
-        window.onload=mainfunc();
-        
-        function mainfunc() {
-            var pos=document.getElementById("cars");
-            var elem=document.getElementById("merc");
-            var i=0;
-            
-            
-            var id=setInterval(moving,1);
+</div>
+
+<script>
+    window.onload=mainfunc();
+
+    function mainfunc() {
+        var pos=document.getElementById("cars");
+        var elem=document.getElementById("merc");
+        var i=0;
+
+
+        var id=setInterval(moving,1);
             //mainfunc();
             //window.alert("I now is:"+i);
             function moving()   {
-                
+
                 if(8*i==2200) {
                     clearInterval(id);
                     document.getElementById("cars").style.visibility="hidden";
                     elem.style.animationDelay="1s";
                     document.getElementById("merc").style.visibility="hidden";
                     
-                 }
+                }
                 else    {
                     i=i+1;
                     //window.alert(i);
@@ -144,7 +142,14 @@
         }
     </script>
     
+    <script>
+        function checkSubmit(e){
+            if(e && e.keyCode == 13){
+              document.forms["myform"].submit();
+          }
+      } 
+  </script>
 
-    </body>
+</body>
 </head>
 </html>

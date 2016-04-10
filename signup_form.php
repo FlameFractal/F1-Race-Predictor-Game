@@ -22,7 +22,6 @@
                 </form>
                 <?php
                     session_start();
-                    //$_SESSION["wrong_email"]=FALSE;
                     if($_SESSION["wrong_email"])    {
                         echo "<p>An account already exists with the current email address</p>";
                     }
