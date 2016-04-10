@@ -2,17 +2,17 @@
 <html>
 <head>
     <title>Race Predictor Challenge</title>
-    <link type="text/css" rel="stylesheet" href="../css/home_pre.css"/>
+    <link type="text/css" rel="stylesheet" href="home_pre.css"/>
 <body>
     <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
     <!--<div id="backg">
     </div>-->
     <div id="images">
         <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
-        <div id="cars" onload="mainfunc()()"><img src="../images/ferrari.jpg"  ></img></div>
-        <div id="merc" onload="mainfunc()"><img src="../images/mercedes.png" id="merc"></img></div>
-        <div id="williams" onload="mainfunc2()"><img src="../images/williams.png" id="williams"></img></div>
-        <div id="redbull" onload="mainfunc2()"><img src="../images/redbull.jpg" id="redbull"></img></div>
+        <div id="cars" onload="mainfunc()()"><img src="ferrari.jpg"  ></img></div>
+        <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
+        <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
+        <div id="redbull" onload="mainfunc2()"><img src="redbull.jpg" id="redbull"></img></div>
         <a href="#outer"><div id = "continue">
             <p>Continue</p>
         </div></a>
@@ -130,7 +130,7 @@
             var i=0;
             var id=setInterval(moving,1);
             function moving()   {
-                if(6*i==2880)   {
+                if(6*i==3900)   {
                     clearInterval(id);
                     element.style.visibility="hidden";
                     red.style.visibility="hidden";

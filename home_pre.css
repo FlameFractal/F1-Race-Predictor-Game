@@ -35,6 +35,7 @@ img#logo   {
 div #cars    {
     position:absolute;
     top:25%;
+    height:10%;
     width:20%;
     left:0%;
     border-color:black;

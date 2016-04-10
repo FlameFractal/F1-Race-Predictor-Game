@@ -1,6 +1,6 @@
 
 body    {
-    background-image:url("../images/chequered-flag.jpg");
+    background-image:url("chequered-flag.jpg");
     background-attachment:fixed;
     color:white;
     background-repeat:repeat-y;
@@ -32,18 +32,21 @@ div #inner  {
 div #inner h2   {
     position:absolute;
     font-family:"Courier New";
-    left:-40%;
+    left:-20%;
 }
 
 
 div #stats  {
     position:absolute;
-    border-style:dashed;
+    border-style:inset outset outset inset;
     border-color:red;
+    border-radius:5px;
+    background-color:black;
+    opacity:0.7;
     height:300px;
     width:300px;
-    top:20px;
-    left:1030px;
+    top:1%;
+    left:180%;
 }
 
 div #stats h3   {
@@ -58,7 +61,7 @@ div #races  {
     /*border-style:solid;
     border-color:white;*/
     top:350px;
-    left:100px;
+    left:-30%;
     height:1500px;
     width:800px;
 }
@@ -74,7 +77,8 @@ div #races table tr td {
 }
 
 div #races table tr td div  {
-    border-color:red;
+    
+    border-color:black;
     border-style:solid;
     height:250px;
     width:250px;
@@ -85,4 +89,35 @@ div #races h3   {
     font-color:white;
     position:absolute;
     left:40%;
+}
+
+div #races table tr td a div img  {
+    height:250px;
+    width:250px;
+}
+
+div #races table tr td a div div   {
+    position:relative;
+    display:flex;
+    top:-52px;
+    left:-3px;
+    height:20%;
+    width:250px;
+    border-color:no-color;
+    opacity:0.7;
+    background-color:black;
+}
+
+div #races table tr td a div div p {
+    padding:5px;
+}
+
+div #races table tr td a:hover div div{
+    border-style:dashed;
+    opacity:1.0;
+    color:white;
+}
+
+div #races table tr td a div div   {
+    color:white;
 }

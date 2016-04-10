@@ -1,12 +1,13 @@
 <html>
     <head>
         <title>Sign Up</title>
-        <link type="text/css" rel="stylesheet" href="../css/signup_style.css"/>
+        <link type="text/css" rel="stylesheet" href="signup_style.css"/>
     </head>
     <body>
         <div>
             <div>
                 <?php
+                    session_start();
                     $name=$_POST["name"];
                     $email=$_POST["email"];
                     $pass=$_POST["password"];
@@ -31,10 +32,16 @@
                         //echo $sql;
                         $result=mysqli_query($conn,$sql);
                         if(!$result) {
+                            $_SESSION["wrong_email"]=TRUE;
                             //echo "Add unsuccessful :(";
-                            echo mysqli_error($conn);
+                            echo "An account already exists for this email ID";
+                            echo "Please enter a new email ID";
+                            //print_r($_SESSION);
+                            header("Location:signup_form.php");
+                            //echo mysqli_error($conn);
                         }
                         else    {
+                            $_SESSION["wrong_email"]=FALSE;
                             echo "<div id=\"success\">
                                         <h3>Successful :)<h3>
                                         <a href=\"home_predict.php\">

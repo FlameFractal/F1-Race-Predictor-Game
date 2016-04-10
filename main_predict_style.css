@@ -1,0 +1,58 @@
+body    {
+    background-image:url("chequered-flag.jpg");
+}
+
+
+div div#menu    {
+    position:absolute;
+    top:100px;
+    left:35%;
+}
+
+div div#menu ul  {
+   
+    list-style-type:none;
+}
+
+div div#menu ul li {
+    
+    display:inline;
+    border-style:inset outset outset inset;
+    border-color:red;
+    padding:20px;
+    height:140px;
+    width:140px;
+    left:-30px;
+    margin:2px;
+    color:white;
+}
+
+
+div div#circuit {
+    position:absolute;
+    top:20%;
+    left:30%;
+    height:500px;
+    width:500px;
+}
+
+div div#circuit div {
+    position:absolute;
+    top:100px;
+    height:400px;
+    width:400px;
+}
+
+div div#circuit div img {
+    position:absolute;
+    top:15%;
+    height:400px;
+    width:600px;
+}
+div div#circuit div h3  {
+    position:absolute;
+    left:5%;
+    color:white;
+    font-family:"Courier New";
+}
+
