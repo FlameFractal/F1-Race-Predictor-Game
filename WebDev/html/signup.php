@@ -30,7 +30,7 @@
                           
                         $point=0;
                         
-                        $sql="insert into `users`  (name,email_id,password) values ('".$name."','".$email."','".$pass."',CURRENT_TIMESTAMP);";
+                        $sql="insert into `users`  (name,email_id,password, reg_date) values ('".$name."','".$email."','".$pass."',CURRENT_TIMESTAMP);";
                         //echo $sql;
                         $result=mysqli_query($conn,$sql);
                         if(!$result) {
