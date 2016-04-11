@@ -4,6 +4,7 @@
     <link type="text/css" rel="stylesheet" href="main_predict_style.css"/>
 </head>
     <body>
+    <div id="wrapper">
     <div>
         <div id="menu">
             <ul>
@@ -132,6 +133,7 @@
         
     ?>
         </div>
+    </div>
     </div>
     </body>
 </html>

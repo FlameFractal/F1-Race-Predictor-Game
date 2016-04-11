@@ -1,26 +1,27 @@
 <html>
-    <head>
+<head>
 
-        <title>Sign Up</title>
-        <link type="text/css" rel="stylesheet" href="signup_form_style.css"/>
-    </head>
-    <body>
+    <title>Sign Up</title>
+    <link type="text/css" rel="stylesheet" href="signup_form_style.css"/>
+</head>
+<body>
+    <div id="wrapper">
         <div id="outer">
             <div id="heading">
                 <h2>Sign Up</h2>
             </div>
 
             <?php
-                session_start();
-                if(isset($_SESSION['email'])){
-                    $email=$_SESSION['email'];
-                }
-                if(isset($_SESSION['password'])){
-                    $password=$_SESSION['password'];
-                }
+            session_start();
+            if(isset($_SESSION['email'])){
+                $email=$_SESSION['email'];
+            }
+            if(isset($_SESSION['password'])){
+                $password=$_SESSION['password'];
+            }
                 // foreach ($_SESSION as $key=>$val)
                 // echo $key." ".$val."<br/>";
-                ?>
+            ?>
 
             <div id="inner">
                 <form name="signup" id="s_form" action="signup.php" onsubmit="return check_form()" method="post">
@@ -41,9 +42,9 @@
                     
                     <input type="submit" value="Submit"></input>
                 </form>
-               
                 
-               
+                
+                
                 <script>
                     function check_form()   {
                         var name=document.forms["signup"]["name"].value;
@@ -68,7 +69,14 @@
                         }
                     }   
                 </script>
-            </div>
-        </div>
-    </body>
+
+                <script>
+                  document.firstElementChild.style.zoom = "reset";
+              </script>
+
+
+          </div>
+      </div>
+  </div>
+</body>
 </html>

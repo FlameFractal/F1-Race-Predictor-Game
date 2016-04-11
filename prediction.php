@@ -5,6 +5,7 @@
         <link type="text/css" rel="stylesheet" href="prediction_style.css"/>
     </head>
     <body>
+    <div id="wrapper">
         
         <div>
         <?php
@@ -212,6 +213,7 @@
             
             ?>
             
+            </div>
             </div>
     </body>
 </html>

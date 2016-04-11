@@ -64,3 +64,6 @@ div div#circuit div img{
         font-family:"Courier New";
     }
 
+#wrapper{
+    margin: 0 auto;
+}

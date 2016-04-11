@@ -4,6 +4,7 @@
     <link type="text/css" rel="stylesheet" href="signup_style.css"/>
 </head>
 <body>
+<div id="wrapper">
     <div>
         <div>
             <?php
@@ -45,6 +46,7 @@
             }
             ?>
         </div>
+    </div>
     </div>
 </body>
 </html>

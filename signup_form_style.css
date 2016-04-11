@@ -10,8 +10,8 @@ div #outer {
 
 div #heading    {
     position:absolute;
-    top:100px;
-    left:50%;;
+    top:200px;
+    left: 45%;
 }
 
 div #inner  {
@@ -28,4 +28,8 @@ div #inner  {
 
 form #s_form    {
     padding:5px;
+}
+
+#wrapper{
+    margin: 0 auto;
 }

@@ -1,12 +1,10 @@
 body    {
-    
-    /*background-image:url("chequered-flag.png");*/
     background-repeat:no-repeat;
-    /*background-attachment:fixed;*/
     background-position:right top;
     background-color:white;
     z-index:-1;
     zoom:100%;
+    overflow-x: hidden;
 }
 
 div #images {
@@ -28,8 +26,6 @@ img#logo   {
     left:-310px;
     top:-310px;
     
-    
-    /*border-radius:8px;*/
 }
 
 div #cars    {
@@ -60,7 +56,7 @@ div #merc   {
     
 }
 div #merc img    {
-    
+
     width:100%;
     
 }
@@ -91,33 +87,6 @@ div #redbull img    {
     width:100%;
 }
 
-/*@keyframes animate    {
-    0%  {left:10px;}
-    5% {left:30px;}
-    10% {left:50px;}
-    15% {left:70px;}
-    20% {left:90px;}
-    25% {left:110px;}
-    30% {left:130px;}
-    35% {left:150px;}
-    40% {left:170px;}
-    50% {left:190px;}
-    60% {left:210px;}
-    70% {left:230px;}
-    80% {left:250px;}
-    90% {left:270px;}
-    100% {left:290px;}
-}*/
-
-
-/*div #continue{
-    position:absolute;
-    top:20%;
-    left:20%;
-    
-    margin-left:25px;
-    margin-top:50px;
-}*/
 
 
 div #outer  {
@@ -201,23 +170,6 @@ div #schedule ol li {
     margin:10px;
 }
 
-
-/*
-a:link {
-    color:black;
-    
-}
-a:hover  {
-    padding:4px 40px 4px 40px;
-    color:black;
-    /*background-color:black;
-}
-
- a:click   {
-    color:black;
-    background-color:white;
-}*/
-
 div #continue{
     position:absolute;
     top:70%;
@@ -226,19 +178,6 @@ div #continue{
     margin-top:50px;
     padding:4px 30px 4px 30px;
     z-index:1;
-}
-
-a:link, a:visited {
-    font-size: 20px;
-    background-color: #f44336;
-    color: white;
-    text-align: center; 
-    text-decoration: none;
-    display: inline-block;
-}
-
-a:hover, a:active {
-    background-color: red;
 }
 
 input[type="submit"], #signup{
@@ -271,3 +210,59 @@ label{
 form ul{
     padding-left: 0;
 }
+
+/*.button{
+    background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+    background-image: linear-gradient(top, #f4f1ee, #fff);
+    border-radius: 50%;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    float:left;
+    height: 70px;
+    margin: 0 30px 30px 0;
+    position: relative;
+    width: 20px;            
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.button:after{
+    color:#e9e6e4;
+    content: "";
+    display: block;
+    font-size: 30px;
+    height: 30px;
+    text-decoration: none;
+    text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+    position: absolute;
+    width: 30px;
+}
+
+.tick:after{
+    content: "▼";
+    left:20px;
+    top:23px;
+}
+
+.button:hover{
+    background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+    background-image: linear-gradient(top, #fff, #f4f1ee);
+    color:#0088cc;
+}
+
+.tick:hover:after{
+    color:#83d244;
+    text-shadow:0px 0px 6px #83d244;
+}
+
+.button:active{
+    background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+    background-image: linear-gradient(top, #efedec, #f7f4f4);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.button:active:after{
+    color:#dbd2d2;
+    text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+}
+
+*/

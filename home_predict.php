@@ -3,7 +3,14 @@
 <head>
     <title>Race Predictor Challenge</title>
     <link type="text/css" rel="stylesheet" href="home_predict_style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >
+
+
     <body>
+    
+
         <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
     <!--<div id="backg">
 </div>-->
@@ -13,9 +20,10 @@
     <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
     <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
     <div id="redbull" onload="mainfunc2()"><img src="redbull.jpg" id="redbull"></img></div>
-    <a id="continue" href="#outer">Continue</a>
+    <!-- <a id="continue" href="#outer">Continue</a> -->
+      <button type="button" id="continue" class="pure-button pure-button-primary">Click me ▼</button>
 </div>
-<div id = "outer">
+<div id = "outer" class="outer">
 
 
 
@@ -43,7 +51,7 @@
             <ul>
                 <li>    
                     <label>Email:</label>
-                    <input type="text" name="email"></input>
+                    <input type="email" name="email"></input>
                     <span style="visibility:hidden">Email required!</span>
                     <br>
                 </li>
@@ -104,6 +112,7 @@
         }
         window.requestAnimationFrame(animation);*/
     </script>
+    
     <script>
         function validate_form()    {
             var email=document.forms["myform"]["email"].value;
@@ -118,7 +127,7 @@
                 //alert("Password required!");
                 return false;
             }                
-        }
+        }</script>
     </script>
     <script>
         window.onload=mainfunc2();
@@ -151,6 +160,18 @@
           }
       } 
   </script>
+
+  <script>
+      document.firstElementChild.style.zoom = "reset";
+  </script>
+<script >
+$("button").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".outer").offset().top},
+        'slow');
+});
+</script>
+  
 
 </body>
 </head>
