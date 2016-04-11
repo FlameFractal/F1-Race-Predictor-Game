@@ -39,7 +39,8 @@
                     $_SESSION["wrong_email"]=FALSE;
                     $_SESSION['auth'] =1;
                     $_SESSION['user_name']=$name;
-                    echo "Signup successful! Redirecting you to home page! ";     
+                    echo "Signup successful! ";
+                    echo "<br>Redirecting you to home page! ";     
                     header('Refresh: 2; url=http://127.0.0.1/F1-Race-Predictor-Game/welcome.php');
                 }
 

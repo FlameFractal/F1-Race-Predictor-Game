@@ -9,11 +9,8 @@
 
 
     <body>
-    
+        
 
-        <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
-    <!--<div id="backg">
-</div>-->
 <div id="images">
     <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
     <div id="cars" onload="mainfunc()()"><img src="ferrari.jpg"  ></img></div>
@@ -23,10 +20,9 @@
     <!-- <a id="continue" href="#outer">Continue</a> -->
       <button type="button" id="continue" class="pure-button pure-button-primary">Click me ▼</button>
 </div>
+
+
 <div id = "outer" class="outer">
-
-
-
     <div id="schedule">
         <h1>Schedule</h1>
         <ol>
