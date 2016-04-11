@@ -25,10 +25,11 @@ else{
 	$sql="select * from `users` WHERE email_id='".$email."';";
 	$result=mysqli_query($conn,$sql);
 	if(mysqli_num_rows($result)==0) {
-		echo "<br/>You're not a user, please sign-up";
-		echo "<div id =\"signup\">
-		<a href=\"signup_form.php\">Sign up for an account</a>
-	</div>";
+		$_SESSION['email']=$email;
+		$_SESSION['password']=$pass;
+		echo "<br>You're not a user, please sign-up!";
+		echo "<br>Redirecting back to Sign Up page !";
+		header('refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/signup_form.php');
 	echo mysqli_error($conn);
 }
 else{
@@ -36,10 +37,9 @@ else{
 	$result=mysqli_query($conn,$sql1);
 	if(mysqli_num_rows($result)==0) {
 		$_SESSION["wrong_password"]=TRUE;
-			                    //echo "<br/>Wrong user name/password";
-		echo "<script>
-		window.open(\"home_predict.php\",\"_self\");
-	</script>";
+		header("refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/home_predict.php#outer");
+		echo "<br><br>Wrong user name or password!";
+		echo "<br>Redirecting back to sign in page!.";
 }
 else{
 	while($rows=mysqli_fetch_assoc($result)){

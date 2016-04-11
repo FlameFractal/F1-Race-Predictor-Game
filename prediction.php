@@ -78,7 +78,7 @@
                 case 'Podium':
                                 break;
                 case 'Topten':  $i=0;
-                                $query1='select `driver_name` from `table 6` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp.'\'ORDER BY `driver_name`;';
+                                $query1='select `driver_name` from `practice_sessions` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp.'\'ORDER BY `driver_name`;';
                                 $result=mysqli_query($conn,$query1);
                                 echo 'mysqli_num_rows($result)';
                                 print_r($result->fetch_assoc());

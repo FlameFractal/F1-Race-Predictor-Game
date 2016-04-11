@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Race Predictor Challenge</title>
-    <link type="text/css" rel="stylesheet" href="home_pre.css"/>
+    <link type="text/css" rel="stylesheet" href="home_predict_style.css"/>
     <body>
         <!--<img src="chequered-flag.png" id="logo" alt="Image couldn't be displayed"></img>-->
     <!--<div id="backg">
@@ -16,6 +16,8 @@
     <a id="continue" href="#outer">Continue</a>
 </div>
 <div id = "outer">
+
+
 
     <div id="schedule">
         <h1>Schedule</h1>
@@ -55,7 +57,7 @@
                 <br>
                 <li>
                     <input type="submit" value="Log In"></input>
-                    <a id="signup" href="signup.php">Sign Up!</a>
+                    <a id="signup" href="signup_form.php">Sign Up!</a>
                 </li>
             </ul>
         </form>

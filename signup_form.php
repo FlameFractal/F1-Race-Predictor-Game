@@ -1,5 +1,6 @@
 <html>
     <head>
+
         <title>Sign Up</title>
         <link type="text/css" rel="stylesheet" href="signup_form_style.css"/>
     </head>
@@ -8,24 +9,41 @@
             <div id="heading">
                 <h2>Sign Up</h2>
             </div>
+
+            <?php
+                session_start();
+                if(isset($_SESSION['email'])){
+                    $email=$_SESSION['email'];
+                }
+                if(isset($_SESSION['password'])){
+                    $password=$_SESSION['password'];
+                }
+                // foreach ($_SESSION as $key=>$val)
+                // echo $key." ".$val."<br/>";
+                ?>
+
             <div id="inner">
                 <form name="signup" id="s_form" action="signup.php" onsubmit="return check_form()" method="post">
-                    Name<br/>  <input type="text" name="name"></input><span>*<p style="visibility:hidden">Name is required!</p></span>
-                    
-                    Email<br/> <input type="email" name="email"></input><span>*<p style="visibility:hidden">Email is required!</p></span>
-                    Password<br/>   <input type="password" name="password"></input><span>*<p style="visibility:hidden">Password is required!</p></span>
-                    Confirm password<br/>  <input type="password" name="np"></input><span style="visibility:hidden">Passwords don't match!</span>
+                    Name<br/>
+                    <input type="text" name="name"></input>
+                    <span><p style="visibility:hidden">Name is required!</p></span>
+                    Email<br/>
+                    <input type="email" name="email" value=<?php if(isset($_SESSION['email'])) print $_SESSION['email'] ?>></input>
+                    <span><p style="visibility:hidden">Email is required!</p></span>
+                    Password<br/>
+                    <input type="password" name="password" value=<?php if(isset($_SESSION['password'])) print $_SESSION['password']  ?>></input>
+                    <span><p style="visibility:hidden">Password is required!</p></span>
+                    Confirm password<br/>
+                    <input type="password" name="np"></input><br>
+                    <span style="visibility:hidden">Passwords don't match!</span>
                     <br/>
                     <br/>
                     
                     <input type="submit" value="Submit"></input>
                 </form>
-                <?php
-                    session_start();
-                    if($_SESSION["wrong_email"])    {
-                        echo "<p>An account already exists with the current email address</p>";
-                    }
-                ?>
+               
+                
+               
                 <script>
                     function check_form()   {
                         var name=document.forms["signup"]["name"].value;
