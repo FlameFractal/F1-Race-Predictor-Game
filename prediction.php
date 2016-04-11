@@ -12,7 +12,7 @@
             session_start();
             $user_name=$_SESSION['user_name'];
             if(!$user_name) {
-                header("Location:home_predict.php");
+                header("Location:index.php");
             }
             $type=$_GET['win'];
             $race=$_GET['race'];

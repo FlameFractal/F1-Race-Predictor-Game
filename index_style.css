@@ -17,6 +17,18 @@ div #images {
     
     width:100%;
 }
+
+#heading{
+    position: absolute;
+    margin: auto;
+    left: 22%;
+    top: 40%;
+    font-size: 40px;
+    font-family: "Courier New";
+    color: blue;
+    visibility: hidden;
+}
+
 img#logo   {
     position:absolute;
     /*height:30em;
@@ -133,38 +145,41 @@ form #forrm {
 
 div #schedule   {
     background-color:grey;
-    top:120%;
+    top:114%;
     left:0%;
     position:absolute;
     float:right;
     border-top-color:black;
     border-color:black;
-    border-style:solid;
+    border-style:inset outset outset inset;
     border-radius:10px;
     border-width:1px;
     border-bottom-color:white;
     border-right-color:white;
-    height:90%;
+    height:70%;
     width:20%;
     overflow:auto;
 }
 
 div #schedule h1    {
+    font-size: 40px;
     position:absolute;
-    top:4%;
-    left:35%;
+    top:1%;
+    left:25%;
 }
 
 div #schedule ol    {
+    text-align: justify-all;
     position:absolute;
     float:left;
     top:10%;
 }
 
 div #schedule ol li {
+    text-align: justify-all;
     font-family:Georgia;
-    font-size:15px;
-    color:orange;
+    font-size:25px;
+    color:red;
     position:relative;
     left:30%;
     margin:10px;
@@ -254,7 +269,7 @@ form ul{
 }
 
 
-/*.button{
+.button{
     background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
     background-image: linear-gradient(top, #f4f1ee, #fff);
     border-radius: 50%;
@@ -308,4 +323,4 @@ form ul{
     text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
 }
 
-*/
+

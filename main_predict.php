@@ -36,7 +36,7 @@
         <?php
         session_start();
         if(!$_SESSION['user_name']){
-            header("location:home_predict.php");
+            header("location:index.php");
         }
         $tag=$_GET['race'];
         echo $tag;      

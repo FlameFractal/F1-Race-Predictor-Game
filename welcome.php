@@ -23,7 +23,7 @@
                 $user_name=$_SESSION['user_name'];
 
                 if (!$_SESSION['user_name']) {
-                    header("location:home_predict.php");
+                    header("location:index.php");
                 }
 
                     // foreach ($_SESSION as $key=>$val)

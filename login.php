@@ -12,7 +12,7 @@ $pass=$_POST["pass"];
 $incorrect=FALSE;
 
 if(empty($email)&&empty($pass)) {
-	header("location:home_predict.php");
+	header("location:index.php");
 }
 
 
@@ -37,7 +37,7 @@ else{
 	$result=mysqli_query($conn,$sql1);
 	if(mysqli_num_rows($result)==0) {
 		$_SESSION["wrong_password"]=TRUE;
-		header("refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/home_predict.php#outer");
+		header("refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/index.php#outer");
 		echo "<br><br>Wrong user name or password!";
 		echo "<br>Redirecting back to sign in page!.";
 }

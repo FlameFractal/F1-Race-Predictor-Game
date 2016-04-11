@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Race Predictor Challenge</title>
-    <link type="text/css" rel="stylesheet" href="home_predict_style.css"/>
+    <link type="text/css" rel="stylesheet" href="index_style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"> -->
     <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >
 
 
     <body>
-        
+        <div id="heading"><h1>F1 Race Predictor Game!</h1></div>
 
 <div id="images">
     <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
@@ -18,7 +18,8 @@
     <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
     <div id="redbull" onload="mainfunc2()"><img src="redbull.jpg" id="redbull"></img></div>
     <!-- <a id="continue" href="#outer">Continue</a> -->
-      <button type="button" id="continue" class="pure-button pure-button-primary">Click me ▼</button>
+      <button type="button" id="continue" >▼</button>
+      
 </div>
 
 
@@ -139,6 +140,8 @@
                     clearInterval(id);
                     element.style.visibility="hidden";
                     red.style.visibility="hidden";
+                    document.getElementById('heading').style.animationDelay='4s';
+                    document.getElementById('heading').style.visibility='visible';
                 }
                 else    {
                     i=i+1;
