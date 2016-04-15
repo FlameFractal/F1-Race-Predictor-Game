@@ -1,6 +1,9 @@
 body    {
     background-image:url("chequered-flag.jpg");
     color:white;
+    top: 100%;
+    left: 50%;
+    text-align: center;
 }
 
 div #success    {
