@@ -6,32 +6,41 @@ body    {
 div div#menu    {
     position:absolute;
     top:100px;
-    left:35%;
+    left:30%;
 }
 
 div div#menu ul  {
 
     list-style-type:none;
 }
-
-div div#menu ul li {
-
-    display:inline;
+div#menu ul a  {
+    text-decoration:none;
     border-style:inset outset outset inset;
     border-color:red;
-    padding:20px;
-    height:140px;
-    width:140px;
-    left:-30px;
-    margin:2px;
     color:white;
+    border-radius:5px;
+    padding:20px;
+    margin:20px;
+    
+    }
+
+div div#menu ul a li {
+
+    display:inline;
+    
 }
 
+div div#menu ul a:hover {
+    border-color:black;
+    background-color:white;
+    color:red;
+    
+}
 
 div div#circuit {
     position:absolute;
     top:20%;
-    left:30%;
+    left:20%;
     height:500px;
     width:500px;
 }
@@ -41,15 +50,24 @@ div div#circuit div {
     top:100px;
     height:400px;
     width:400px;
+    border-width:5px;
+    
 }
 
 div div#circuit div img{
  display: block;
+ position:absolute;
  max-width:800px;
  max-height:800px;
  width: auto;
  height: auto;
-}
+ top:100px;
+
+ border-style:inset outset outset inset;
+ padding:10px;
+ border-width: 10px;
+ 
+ }
 
 /*div div#circuit div img {
     position:absolute;

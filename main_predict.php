@@ -45,13 +45,13 @@
             
                             echo 'Race selected is australia';
                             echo "
-                            <div>
+                            <div style=\"border-image:url(\"australia.jpg\") 10 round;\">
                                 <h3>Albert Park Circuit</h3>
                                 <img src=\"albertpark.jpg\"></img>
                             </div>";
                             break;
             case 'PMGP':    echo "
-                                <div>
+                                <div style=\"border-image:url(\"malaysia.jpg\") 10 round;\">
                                     <h3>Sepang International Circuit</h3>
                                     <img src=\"sepang.png\"></img>
                                 </div>
@@ -59,42 +59,42 @@
                             break;
             case 'CGP': 
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(china.jpg) 10 round;\">
                                         <h3>Shanghai International Circuit</h3>
                                         <img src=\"shanghai.png\"></img>
                                     </div>";
                             break;
             case 'GABGP':     
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(bahrain.jpg) 10 round;\">
                                         <h3>Sakhir International Circuit</h3>
                                         <img src=\"sakhir.png\"></img>
                                     </div>";
                             break;
             case 'GPDM':
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(monaco.jpg) 10 round;\">
                                         <h3><Circuit de Monte Carlo</h3>
                                         <img src=\"cmonaco.png\"></img>
                                     </div>";
                             break;
             case 'GPDC':    
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(canada.jpg) 10 round;\">
                                         <h3>Circuit de Gilles Villeneuve</h3>
                                         <img src=\"gilles.png\"></img>
                                     </div>";
                             break;
             case 'BGP':
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(british.jpg) 10 round;\">
                                         <h3>Silverstone Grand Prix Circuit</h3>
                                         <img src=\"silverstone.png\"></img>
                                     </div>";
                             break;
             case 'SBGP':    
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(belgium.jpg) 10 round;\">
                                         <h3>Spa Francorchamps</h3>
                                         <br>
                                         <img src=\"spa.png\"></img>
@@ -102,28 +102,28 @@
                             break;
             case 'SAGP':    
                             echo "
-                                    <div>
+                                    <div  style=\"border-image:url(singapore.jpg) 10 round;\">
                                         <h3>Marina Bay Street Circuit</h3>
                                         <img src=\"marina.png\"></img>
                                     </div>";
                             break;
             case 'RGP':
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(russia.jpg) 10 round;\">
                                         <h3>Sochi Autodrom</h3>
                                         <img src=\"sochi.png\"></img>
                                     </div>";
                             break;
             case 'USGP':   
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(us.jpg) 10 round;\">
                                         <h3>Circuit of the Americas</h3>
                                         <img src=\"cota.png\"></img>
                                     </div>";
                             break;
             case 'JGP':     
                             echo "
-                                    <div>
+                                    <div style=\"border-image:url(japan.jpg) 10 round;\">
                                         <h3>Suzuka Circuit</h3>
                                         <img src=\"suzuka.png\"></img>
                                     </div>";

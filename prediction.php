@@ -75,39 +75,96 @@
             echo "<div id=\"predict\">";
             switch($type)   {
                 case 'winner':  
-                                break;
-                case 'Podium':
-                                break;
-                case 'Topten':  $i=0;
-                                $query1='select `driver_name` from `practice_sessions` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp.'\'ORDER BY `driver_name`;';
+                                $query1='select `driver_name` from `table 6` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp.'\'ORDER BY `driver_name`;';
                                 $result=mysqli_query($conn,$query1);
-                                echo 'mysqli_num_rows($result)';
-                                print_r($result->fetch_assoc());
-                                
                                 if(mysqli_num_rows($result)!=0) {
-                                    echo "<form>";
-                                    for($i=0;$i<10;$i++)    {
-                                        $test=0;
+                                    echo "<h3>Enter your predicted winner</h3>";
+                                    echo "<form action=\"\" type=\"GET\">";
+                                    echo "
+                                         <select name=\"winner\">";
+                                    while($test=$result->fetch_assoc()) {
+                                        echo "<option value=".$test['driver_name'].">".$test['driver_name']."</option>";
+                                    }
+                                    echo "</select>";
+                                    echo "<br/>";
+                                    echo "<input type=\"submit\" value=\"submit\"></input>
+                                            </form>";
+                                    
+                                }
+                                
+                                break;
+                case 'Podium':  
+                                $i=0;
+                                $query1='select `driver_name` from `table 6` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp.'\'ORDER BY `driver_name`;';
+                                $result=mysqli_query($conn,$query1);
+                                if(mysqli_num_rows($result)!=0) {
+                                    echo "<h3>Enter your predicted Podium finishers</h3>";
+                                    echo "<form action=\"\" type=\"GET\">";
+                                    for($i=0;$i<3;$i++) {
+                                             $value="driver".$i;
                                         echo "
-                                            <select name=\"driver\">
+                                            <select name=".$value." >
                                             ";
+                                        $result=mysqli_query($conn,$query1);    
                                         while($test=$result->fetch_assoc()) {
-                                            $r=$i+1;
+                                            //$r=$i+1;
                                             echo $test['driver_name'];
-                                            echo $r."<option value=".$test['driver_name'].">".$test['driver_name']."
+                                            echo "<option value=".$test['driver_name'].">".$test['driver_name']."
                                             </option>;";
                                         }                                    
                                         echo "</select>";
-                                        echo $test;
+                                        echo "<br/>";
+                                        //echo $test;
                                     }
                                     echo $test;
-                                }
-                                echo "
+                                     echo "
                                        
                                      <input type=\"submit\" value=\"Submit\">
                                            </input>
                                         </form>
                                         ";
+                                }
+                                break;
+                case 'Topten':  $i=0;
+                                
+                                $query1='select `driver_name` from `table 6` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp.'\'ORDER BY `driver_name`;';
+                                $result=mysqli_query($conn,$query1);
+                                //echo $query1;
+                                //echo 'mysqli_num_rows($result)';
+                                $r=0;
+                                //print_r($result->fetch_assoc());
+                                
+                                if(mysqli_num_rows($result)!=0) {
+                                    echo "<h3>Enter your predicted Top Ten</h3>";
+                                    echo "<form action=\"\" type=\"GET\">";
+                                    for($i=0;$i<10;$i++)    {
+                                        $test=0;
+                                        
+                                        $value="driver".$i;
+                                        echo "
+                                            <select name=".$value." onchange=\"mfunction()\">
+                                            ";
+                                        echo "<option value=\"\"></option>";
+                                        $result=mysqli_query($conn,$query1);    
+                                        while($test=$result->fetch_assoc()) {
+                                            //$r=$i+1;
+                                            echo $test['driver_name'];
+                                            echo "<option value=".$test['driver_name']." style=\"visibility:true;\">".$test['driver_name']."
+                                            </option>;";
+                                        }                                    
+                                        echo "</select>";
+                                        echo "<br/>";
+                                        //echo $test;
+                                    }
+                                    echo $test;
+                                     echo "
+                                       
+                                     <input type=\"submit\" value=\"Submit\">
+                                           </input>
+                                        </form>
+                                        ";
+                                }
+                               
                                 break;
                                 
             }
@@ -215,5 +272,28 @@
             
             </div>
             </div>
+            <script>
+                var drivers=[];
+                var i=0,j=0,k=0;
+                function mfunction()  {
+                    for(i=0;i<10;i++)   {
+                        var elem=document.getElementsByTagName("select")[i];
+                        drivers.push(elem.value);
+                        for(j=0;j<20;j++)   {
+                            var elem1=elem.getElementsByTagName("option")[j];
+                            for(k=0;k<drivers.length;k++)   {
+                                
+                                if(drivers[k]==elem1.value) {
+                                    //window.alert(elem1.value);
+                                    elem1.style.visibility='hidden';
+                                }
+                            }
+                        }
+                        //window.alert(elem1);
+                    }
+                //window.alert(elem.name);
+                }
+                //document.getElementsByTagName("select")[0].addEventListener("click",mfunction);
+            </script>
     </body>
 </html>

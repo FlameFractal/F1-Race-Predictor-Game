@@ -1,5 +1,7 @@
 body    {
     background-image:url("chequered-flag.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
 h2  {
@@ -36,7 +38,7 @@ div#practice_sessions ul a:hover {
 div#practice_table {
     position:absolute;
     top:40%;
-    left:33%;
+    left:50%;
 }
 div#practice_table table {
     border-style:inset outset outset inset;
@@ -67,7 +69,26 @@ div#practice_table table tbody tr td    {
 div#predict {
     position:absolute;
     color:white;
-    
+    top:70%;
+    left:20%;
+}
+
+div#predict form  select  {
+    margin:10px;
+    background-color:black;
+    color:red;
+    border-style:inset outset outset inset;
+    border-color:red;
+    border-radius:5px;
+}
+
+div #predict form input {
+    margin:20px;
+    background-color:black;
+    color:red;
+    border-style:inset outset outset inset;
+    border-color:black;
+    border-radius:5px;
 }
 
 #wrapper{
