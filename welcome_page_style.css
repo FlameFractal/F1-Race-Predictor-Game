@@ -115,9 +115,8 @@ div #races table tr td a div div   {
     background-color:black;
 }
 
-div #races table tr td a div p {
+div #races table tr td a div div p {
     padding:5px;
-    text-decoration:none;
 }
 
 div #races table tr td a:hover div div{
