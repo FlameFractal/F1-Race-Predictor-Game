@@ -70,8 +70,9 @@
 </div>
 
 <script>
+    
     window.onload=mainfunc();
-
+   
     function mainfunc() {
         var pos=document.getElementById("cars");
         var elem=document.getElementById("merc");

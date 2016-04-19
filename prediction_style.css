@@ -18,7 +18,7 @@ div#practice_sessions ul  {
     left:30%;
 }
 
-div#practice_sessions ul a{
+div#practice_sessions ul li button{
     color:white;
     border-style:inset outset outset inset;
     border-color:red;
@@ -26,41 +26,98 @@ div#practice_sessions ul a{
     margin:20px;
     padding:20px;
     text-decoration:none;
+    background-color:black;
 }
-div#practice_sessions ul a li   {
+div#practice_sessions ul li   {
     display:inline;
 }
-div#practice_sessions ul a:hover {
-    background-color:white;
-    border-color:black;
-    color:red;
-}
+
 div#practice_table {
     position:absolute;
     top:40%;
     left:50%;
 }
-div#practice_table table {
+div#practice_table table#p1 {
     border-style:inset outset outset inset;
     border-color:red;
     border-radius:5px;
     background-color:black;
     opacity:0.9;
+    position:absolute;
+    top:70%;
+    left:20%;
 }
 
-div#practice_table h4   {
+div#practice_table table#p2 {
+    border-style:inset outset outset inset;
+    border-color:red;
+    border-radius:5px;
+    background-color:black;
+    opacity:0.9;
+    position:absolute;
+    top:70%;
+    left:20%;
+}
+
+div#practice_table table#p3 {    
+    border-style:inset outset outset inset;
+    border-color:red;
+    border-radius:5px;
+    background-color:black;
+    opacity:0.9;
+    position:absolute;
+    top:70%;
+    left:20%;
+}
+
+div#practice_table h4#pr1   {
+    color:white;
+    font-family:"Courier New";
+    }
+div#practice_table h4#pr2   {
+    color:white;
+    font-family:"Courier New";
+    
+}
+div#practice_table h4#pr3   {
     color:white;
     font-family:"Courier New";
     
 }
 
-div#practice_table table thead th  {
+
+
+div#practice_table table#p1 thead th  {
     color:red;
     padding:10px;
     text-align:center;
 }
 
-div#practice_table table tbody tr td    {
+div#practice_table table#p2 thead th  {
+    color:red;
+    padding:10px;
+    text-align:center;
+}
+
+div#practice_table table#p3 thead th  {
+    color:red;
+    padding:10px;
+    text-align:center;
+}
+
+div#practice_table table#p1 tbody tr td    {
+    color:white;
+    padding:10px 15px 10px 15px;
+    text-align:center;
+}
+
+div#practice_table table#p2 tbody tr td    {
+    color:white;
+    padding:10px 15px 10px 15px;
+    text-align:center;
+}
+
+div#practice_table table#p3 tbody tr td    {
     color:white;
     padding:10px 15px 10px 15px;
     text-align:center;
