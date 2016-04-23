@@ -35,7 +35,8 @@ img#logo   {
     position:absolute;
     /*height:30em;
     width:84em;*/
-    width:102%;
+    width:110%;
+    height:10%;
     opacity:1.0;
     left:-310px;
     top:-310px;
@@ -124,7 +125,7 @@ div #inner  {
     
     /*float:center;*/
     width:300px;
-    top:130%;
+    top:140%;
     left:40%;
     border-style:inset outset outset inset;
     border-color:black;

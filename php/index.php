@@ -18,7 +18,7 @@
     <div id="williams" onload="mainfunc2()"><img src="../images/williams.png" id="williams"></img></div>
     <div id="redbull" onload="mainfunc2()"><img src="../images/redbull.png" id="redbull"></img></div>
     <!-- <a id="continue" href="#outer">Continue</a> -->
-      <button type="button" id="continue" >▼</button>
+      <button type="button" id="continue" onclick="animate()">▼</button>
       
 </div>
 
@@ -67,6 +67,14 @@
             </ul>
         </form>
     </div>
+    <p>&#160</p>
+    <p>&#160</p>
+    <p>&#160</p>
+    <p>&#160</p>
+    <p>&#160</p>
+    <p>&#160</p>
+    <p>&#160</p>
+    <p>&#160</p>
 </div>
 
 <script>
@@ -170,6 +178,28 @@ $("button").click(function() {
         scrollTop: $(".outer").offset().top},
         'slow');
 });
+/*window.onload(animate());
+function animate()  {
+    var elem=getElementById("inner");
+    elem.height="700px";
+    elem.width="700px";
+    var i=0;
+    var id=setInterval(inact,100);
+    function inact()    {
+        if(i==400)  {
+            clearInterval(id);
+        }
+        else    {
+            i+=10;
+            elem.height=(700-i)+"px";
+            elem.width=(700-i)+"px";
+        }
+    
+    }
+}*/
+/*function scrollfunction()   {
+    window.scrollTo(0,2500);
+}*/
 </script>
 <script>
     
