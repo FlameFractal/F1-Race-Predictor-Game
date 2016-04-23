@@ -22,9 +22,10 @@
         $server="localhost";
         $username="root";
         $password="tiger";
+        $database="dbms";
         $lineup=array();
         
-        $conn=mysqli_connect($server,$username,$password,"dbms");
+        $conn=mysqli_connect($server,$username,$password,$database);
         if($conn->connect_error)  {
             die('mysqli_error($conn)');
             //header("location:www.google.com");

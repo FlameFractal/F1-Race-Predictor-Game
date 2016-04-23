@@ -31,9 +31,9 @@
 	$server="localhost";
 	$username="root";
 	$password="tiger";
-
+	$database="dbms";
 	
-	$conn=mysqli_connect($server,$username,$password,"dbms");
+	$conn=mysqli_connect($server,$username,$password,$database);
 
 	$query1='select `user_name` ,  `total_points` from users order by total_points desc;';
 	$query2='select p.user_name, g.gp_name, p.points from gp g inner join points p on p.gp_id=g.gp_id order by `gp_name`;';

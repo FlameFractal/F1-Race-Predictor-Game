@@ -12,10 +12,11 @@
             $name=$_POST["name"];
             $email=$_POST["email"];
             $pass=$_POST["password"];
-            $servername="localhost";
+            
             if(empty($name)&&empty($email)&&empty($pass))   {
                 header("location:signup_form.php");
             }
+            $servername="localhost";
             $username="root";
             $password="tiger";
             $database="dbms";

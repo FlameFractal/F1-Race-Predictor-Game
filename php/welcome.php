@@ -45,9 +45,10 @@
                     $server="localhost";
                     $username="root";
                     $password="tiger";
+                    $database="dbms";
                     $pts=0;
                     $games=0;
-                    $conn=mysqli_connect($server,$username,$password,"dbms");
+                    $conn=mysqli_connect($server,$username,$password,$database);
                     if($conn->connect_error)   {
                         echo 'Can\'t conncect';
                     }
