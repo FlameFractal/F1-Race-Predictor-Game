@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="stylesheet" type="text/css" href="../css/signup_style.css">
+</head>
+<body>
+
+</body>
+</html>
+
 <?php
 session_start();
 
