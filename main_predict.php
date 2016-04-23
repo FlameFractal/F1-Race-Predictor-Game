@@ -39,7 +39,6 @@
             header("location:index.php");
         }
         $tag=$_GET['race'];
-        echo $tag;      
         switch($tag)    {
             case 'RAGP':
             

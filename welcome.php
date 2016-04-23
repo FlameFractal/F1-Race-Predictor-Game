@@ -40,28 +40,35 @@
                 <div id="stats">
                     <h3>Player Stats</h3>
                     <?php
-                        $server="localhost";
-                        $username="root";
-                        $password="tiger";
-                        $pts=0;
-                        $conn=mysqli_connect($server,$username,$password,"dbms");
-                        if($conn->connect_error)   {
-                            echo 'Can\'t conncect';
+                    $server="localhost";
+                    $username="root";
+                    $password="tiger";
+                    $pts=0;
+                    $games=0;
+                    $conn=mysqli_connect($server,$username,$password,"dbms");
+                    if($conn->connect_error)   {
+                        echo 'Can\'t conncect';
+                    }
+                    else    {
+                        $query='select `total_points` from `users` WHERE user_name=\''.$user_name.'\';';
+                        $query2='select count(*) as games from `points` WHERE user_name=\''.$user_name.'\';';
+                        $result=mysqli_query($conn,$query);
+                        $result2=mysqli_query($conn, $query2);
+                        if(!$result || !$result2) {
+                            echo mysqli_error($result);
+                            echo mysqli_error($result);
                         }
                         else    {
-                            $query='select `points` from `users` WHERE user_name=\''.$user_name.'\';';
-                            $result=mysqli_query($conn,$query);
-                            if(mysqli_num_rows($result)==0) {
-                            
+                            while($data=$result->fetch_assoc()) {
+                                $pts=$data['total_points'];
                             }
-                            else    {
-                                while($data=$result->fetch_assoc()) {
-                                        $pts=$data['points'];
-                                }
-                                echo '<h4>Points Scored:'.$pts.'</h4>';
-                                echo '<h4>Games Played:</h4>';
+                            while($data2=$result2->fetch_assoc()) {
+                                $games=$data2['games'];
                             }
+                            echo '<h4>Points Scored: '.$pts.'</h4>';
+                            echo '<h4>Games Played: '.$games.'</h4>';
                         }
+                    }
                     ?>
                 </div>
                 <div id="races">

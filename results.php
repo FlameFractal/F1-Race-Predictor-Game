@@ -65,10 +65,10 @@
         }
         ?>
         <?php
-        $query='select `points` from `users` WHERE `user_name`=\''.$_SESSION['user_name'].'\';';
+        $query='select `total_points` from `users` WHERE `user_name`=\''.$_SESSION['user_name'].'\';';
         $result=mysqli_query($conn,$query);
         while($dat=$result->fetch_assoc())  {
-            $points=$dat['points'];
+            $points=$dat['total_points'];
         }
         $tpoint=0;
         switch($type)   {
@@ -103,7 +103,7 @@
                             $pred=array();
                             $j=0;
                             for(;$i<3;$i++) {
-                                array_push($pred,$_GET['driver'.$i]);
+                                array_push($pred,$_POST['driver'.$i]);
                             }
                             for($i=0;$i<3;$i++) {
                                 for(;$j<3;$j++) {
@@ -117,12 +117,16 @@
                             
         }
         //print_r($_SESSION);
+        // $query='UPDATE `points` set `points`='.$tpoints.'where user_name=\''.$_SESSION['user_name'].'\' and `gp_name`='.$race.'\';';
+        // $result=mysqli_query($conn,$query);
+
         $points+=$tpoint;
-        $query='UPDATE `users` SET `points`='.$points.' WHERE user_name=\''.$_SESSION['user_name'].'\';';
+        $query='UPDATE `users` SET `total_points`='.$points.' WHERE user_name=\''.$_SESSION['user_name'].'\';';
         //echo $query;
         $result=mysqli_query($conn,$query);
         
-        $query='INSERT INTO `points` VALUES (\''.$_SESSION['user_name'].'\',\''.$race.'\');';
+
+        $query='INSERT INTO `points` VALUES (\''.$_SESSION['user_name'].'\',\''.$race.'\',\''.$tpoints.'\');';
         //echo $query;
         $result=mysqli_query($conn,$query);
         echo '<div id="point">';
