@@ -30,7 +30,7 @@
                 $result=mysqli_query($conn,$sql);
                 if(!$result) {
                     $_SESSION["wrong_email"]=TRUE;
-                    header('Refresh: 2; url=http://127.0.0.1/F1-Race-Predictor-Game/signup_form.php');
+                    header('Refresh: 2; url=http://127.0.0.1/F1-Race-Predictor-Game/php/signup_form.php');
                     echo "An account already exists for this email ID";
                     echo "<br>Please enter a new email ID";
 
@@ -41,7 +41,7 @@
                     $_SESSION['user_name']=$name;
                     echo "Signup successful! ";
                     echo "<br>Redirecting you to home page! ";     
-                    header('Refresh: 2; url=http://127.0.0.1/F1-Race-Predictor-Game/welcome.php');
+                    header('Refresh: 2; url=http://127.0.0.1/F1-Race-Predictor-Game/php/welcome.php');
                 }
 
             }

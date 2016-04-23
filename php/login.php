@@ -29,7 +29,7 @@ else{
 		$_SESSION['password']=$pass;
 		echo "<br>You're not a user, please sign-up!";
 		echo "<br>Redirecting back to Sign Up page !";
-		header('refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/signup_form.php');
+		header('refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/php/signup_form.php');
 	echo mysqli_error($conn);
 }
 else{
