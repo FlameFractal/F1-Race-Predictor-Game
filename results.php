@@ -22,7 +22,6 @@
         $username="root";
         $password="tiger";
         $lineup=array();
-        echo $type;
         
         $conn=mysqli_connect($server,$username,$password,"dbms");
         if($conn->connect_error)  {
@@ -73,7 +72,7 @@
         $tpoint=0;
         switch($type)   {
             case 'Winner':
-                            $temp=$_POST['driver'];
+                            $temp=mysql_real_escape_string($_POST['driver']);
                             //echo 'Inside winner';
                             //echo $lineup[0];
                             //echo $temp;
@@ -126,7 +125,8 @@
         $result=mysqli_query($conn,$query);
         
 
-        $query='INSERT INTO `points` VALUES (\''.$_SESSION['user_name'].'\',\''.$race.'\',\''.$tpoints.'\');';
+        $query='INSERT INTO `points` VALUES (\''.$_SESSION['user_name'].'\',\''.$race.'\',\''.$tpoint.'\');';
+        echo($query);
         //echo $query;
         $result=mysqli_query($conn,$query);
         echo '<div id="point">';

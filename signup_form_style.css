@@ -4,6 +4,10 @@ body    {
     color:white;
     margin: auto auto;
     text-align: center;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 div #outer {

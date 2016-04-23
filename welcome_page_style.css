@@ -6,7 +6,10 @@ body    {
     color:white;
     background-repeat:repeat-y;
     margin:0;
-    background-size:1366px 768px;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 
@@ -23,10 +26,20 @@ div #info   {
     border-width:1px;*/
 }
 
- #logout {
+ #logout, #leaderboard, #rules{
     position: absolute;
     top: 55px;
  }
+
+#leaderboard{
+    left: 15%;
+    font-family: "Courier New";
+}
+#rules{
+    position: absolute;
+    left: 60%;
+    font-family: "Courier New";
+}
 
 div #inner {
     position:absolute;
@@ -39,7 +52,7 @@ div #inner {
     border-width:1px;*/
 }
 
-div #inner h2  , #logout {
+div #inner h2  , #logout{
     position:absolute;
     font-family:"Courier New";
     left:-20%;
@@ -147,7 +160,7 @@ img {
     max-width: 400;
 }
 
-#logout {
+#logout , #leaderboard, #rules{
     font-size: 20px;
     background-color: #f44336;
     color: white;
@@ -156,7 +169,7 @@ img {
     display: inline-block;
 }
 
-#logout {
+#logout, #leaderboard, #rules {
     padding: 10px 15px;
     background: #4479BA;
     color: #FFF;
@@ -176,12 +189,12 @@ img {
     -ms-user-select:none;
     user-select:none;
 }
-#logout:hover {
+#logout:hover ,, #leaderboard:hover, #rules:hover{
     background: #356094;
     border: solid 1px #2A4E77;
     text-decoration: none;
 }
-#logout:active {
+#logout:active, , #leaderboard:active, #rules:active {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);

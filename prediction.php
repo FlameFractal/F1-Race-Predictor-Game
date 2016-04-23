@@ -77,9 +77,8 @@
             }
 
             $que='select * from `points` WHERE user_name=\''.$_SESSION['user_name'].'\' AND gp_name=\''.$race.'\';';
-            echo $que;
+            
             $res=mysqli_query($conn,$que);
-            echo mysqli_num_rows($res);
             
 
             if(mysqli_num_rows($res)!=0)   {

@@ -31,6 +31,8 @@
 
                 echo "<h2>Welcome, ".$user_name."</h2>";
                 echo "<a id=\"logout\" href=\"logout.php\">Log Out</a>";
+                echo "<a id=\"leaderboard\" href=\"points_table.php\">Leaderboard </a>";
+                echo "<a id=\"rules\"  href=\"rules.html\">Rules</a>";
                 //echo "<a id='\"pts\" href=\"\">Points</a>";
                 
                 ?>

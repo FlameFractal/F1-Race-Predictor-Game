@@ -2,7 +2,10 @@ body    {
     background-image:url("kerb.jpg");
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-size: 1366px 768px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h2  {
@@ -84,7 +87,7 @@ div#practice_table table#p3 {
 div#practice_table h4#pr1   {
     color:white;
     font-family:"Courier New";
-    }
+}
 div#practice_table h4#pr2   {
     color:white;
     font-family:"Courier New";
@@ -179,7 +182,7 @@ div#results     {
     top:20%;
     left:30%;
     
-    }
+}
 
 div#results table {
     border-color:red;

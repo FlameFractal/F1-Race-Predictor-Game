@@ -1,6 +1,10 @@
 body    {
     background-image:url("kerb.jpg");
-    background-size:1366px 768px;
+    //background-size:1366px 768px;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 
