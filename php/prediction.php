@@ -20,10 +20,11 @@
             $server="localhost";
             $username="root";
             $password="tiger";
+            $database="dbms";
             $temp1=$race."_PR1";
             $temp2=$race."_PR2";
             $temp3=$race."_PR3";
-            $conn=mysqli_connect($server,$username,$password,"dbms");
+            $conn=mysqli_connect($server,$username,$password,$database);
             
             switch($race)   {
                 case 'RAGP':
@@ -76,7 +77,7 @@
                 break;
             }
 
-            $que='select * from `points` WHERE user_name=\''.$_SESSION['user_name'].'\' AND gp_name=\''.$race.'\';';
+            $que='select * from `points` WHERE user_name=\''.$_SESSION['user_name'].'\' AND gp_id=\''.$race.'\';';
             
             $res=mysqli_query($conn,$que);
             

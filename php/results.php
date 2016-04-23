@@ -22,9 +22,10 @@
         $server="localhost";
         $username="root";
         $password="tiger";
+        $database="dbms";
         $lineup=array();
         
-        $conn=mysqli_connect($server,$username,$password,"dbms");
+        $conn=mysqli_connect($server,$username,$password,$database);
         if($conn->connect_error)  {
             die('mysqli_error($conn)');
             //header("location:www.google.com");
@@ -116,9 +117,6 @@
                             break;
                             
         }
-        //print_r($_SESSION);
-        // $query='UPDATE `points` set `points`='.$tpoints.'where user_name=\''.$_SESSION['user_name'].'\' and `gp_name`='.$race.'\';';
-        // $result=mysqli_query($conn,$query);
 
         $points+=$tpoint;
         $query='UPDATE `users` SET `total_points`='.$points.' WHERE user_name=\''.$_SESSION['user_name'].'\';';
