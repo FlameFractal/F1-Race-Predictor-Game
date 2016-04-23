@@ -10,6 +10,7 @@
         </div>
         </a>
         <?php
+        error_reporting (E_ALL ^ E_NOTICE); /* 1st line (recommended) */
         session_start();
         $user_name=$_SESSION['user_name'];
         if(!$user_name) {
@@ -126,7 +127,7 @@
         
 
         $query='INSERT INTO `points` VALUES (\''.$_SESSION['user_name'].'\',\''.$race.'\',\''.$tpoint.'\');';
-        echo($query);
+        
         //echo $query;
         $result=mysqli_query($conn,$query);
         echo '<div id="point">';
