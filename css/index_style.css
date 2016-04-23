@@ -119,7 +119,7 @@ div #outer  {
 
 div #inner  {
     position:absolute;
-    background-image:url("monzabank.jpg");
+    background-image:url("../images/monzabank.jpg");
     background-position:top-left;
     
     /*float:center;*/
@@ -154,7 +154,7 @@ form #forrm {
 }
 
 div #schedule   {
-    background-image:url("banking.jpg");
+    background-image:url("../images/banking.jpg");
     background-repeat:no-repeat;
     background-position:center;
     top:115.5%;
