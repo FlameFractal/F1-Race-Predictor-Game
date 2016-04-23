@@ -76,7 +76,7 @@
                 break;
             }
 
-            $que='select * from `points` WHERE user_name=\''.$_SESSION['user_name'].'\' AND gp_name=\''.$race.'\';';
+            $que='select * from `points` WHERE user_name=\''.$_SESSION['user_name'].'\' AND gp_id=\''.$race.'\';';
             
             $res=mysqli_query($conn,$que);
             
