@@ -2,7 +2,7 @@
 <head>
 
     <title>Sign Up</title>
-    <link type="text/css" rel="stylesheet" href="signup_form_style.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/signup_form_style.css"/>
 </head>
 <body>
     <div id="wrapper">

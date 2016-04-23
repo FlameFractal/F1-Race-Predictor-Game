@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Race Predictor Challenge</title>
-    <link type="text/css" rel="stylesheet" href="index_style.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/index_style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"> -->
     <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >
@@ -12,11 +12,11 @@
         <div id="heading"><h1>WELCOME</h1></div>
 
 <div id="images">
-    <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
-    <div id="cars" onload="mainfunc()()"><img src="ferrari2.png"  ></img></div>
-    <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
-    <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
-    <div id="redbull" onload="mainfunc2()"><img src="redbull.png" id="redbull"></img></div>
+    <img src="../images/racingline.jpg" id="logo" alt="Image could not be displayed"></img>
+    <div id="cars" onload="mainfunc()()"><img src="../images/ferrari2.png"  ></img></div>
+    <div id="merc" onload="mainfunc()"><img src="../images/mercedes.png" id="merc"></img></div>
+    <div id="williams" onload="mainfunc2()"><img src="../images/williams.png" id="williams"></img></div>
+    <div id="redbull" onload="mainfunc2()"><img src="../images/redbull.png" id="redbull"></img></div>
     <!-- <a id="continue" href="#outer">Continue</a> -->
       <button type="button" id="continue" >▼</button>
       

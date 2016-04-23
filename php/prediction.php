@@ -2,7 +2,7 @@
 <head>
 
     <title>Predict the Winner</title>
-    <link type="text/css" rel="stylesheet" href="prediction_style.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/prediction_style.css"/>
 </head>
 <body onload="">
     <div id="wrapper">

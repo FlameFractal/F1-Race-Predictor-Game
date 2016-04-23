@@ -1,3 +1,5 @@
+000webhost.com
+
 f1race.net23.net
 Flame Fractal
 vg396@snu.edu.in
@@ -6,6 +8,4 @@ user name : a8046511
 
 database name : a8046511_dbms
 user: a8046511_root
-password: tiger@f1
-
-abc123
+password: abc123

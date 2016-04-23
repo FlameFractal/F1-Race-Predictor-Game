@@ -3,7 +3,7 @@
 <meta name="google" content="notranslate" />
 <head>
     <title></title>
-    <link type="text/css" rel="stylesheet" href="welcome_page_style.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/welcome_page_style.css"/>
 </head>
 <body>
     <div id="wrapper">
@@ -23,7 +23,7 @@
                 $user_name=$_SESSION['user_name'];
 
                 if (!$_SESSION['user_name']) {
-                    header("location:index.php");
+                    header("location:php/index.php");
                 }
 
                     // foreach ($_SESSION as $key=>$val)
@@ -82,7 +82,7 @@
                             <tr>
                                 <td>
                                     <a href="main_predict.php?race=RAGP"><div>
-                                        <img src="australia.jpg"></img>
+                                        <img src="../images/australia.jpg"></img>
                                         <div>
                                             <p>Rolex Australian Grand Prix</p>
                                         </div>
@@ -92,7 +92,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=PMGP"><div>
-                                        <img src="malaysia.jpg"></img>
+                                        <img src="../images/malaysia.jpg"></img>
                                         <div>
                                             <p>Petronas Malaysian Grand Prix</p>
                                         </div>
@@ -102,7 +102,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=CGP"><div>
-                                        <img src="china.jpg"></img>
+                                        <img src="../images/china.jpg"></img>
                                         <div>
                                             <p>Chinese Grand Prix</p>
                                         </div>
@@ -112,7 +112,7 @@
                             <tr>
                                 <td>
                                     <a href="main_predict.php?race=GABGP"><div>
-                                        <img src="bahrain.jpg"></img>
+                                        <img src="../images/bahrain.jpg"></img>
                                         <div>
                                             <p>Gulf Air Bahrain Grand Prix</p>
                                         </div>
@@ -120,7 +120,7 @@
                                 </td>   
                                 <td>
                                     <a href="main_predict.php?race=GPDM"><div>
-                                        <img src="monaco.jpg"></img>
+                                        <img src="../images/monaco.jpg"></img>
                                         <div>
                                             <p>Grand Prix du Monaco</p>
                                         </div>
@@ -129,7 +129,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=GPDC"><div>
-                                        <img src="canada.jpg"></img>
+                                        <img src="../images/canada.jpg"></img>
                                         <div>
                                             <p>Grand Prix du Canada</p>
                                         </div>
@@ -139,7 +139,7 @@
                             <tr>                                   
                                 <td>
                                     <a href="main_predict.php?race=BGP"><div>
-                                        <img src="british.jpg"></img>
+                                        <img src="../images/british.jpg"></img>
                                         <div>
                                             <p>British Grand Prix</p>
                                         </div>
@@ -148,7 +148,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=SBGP"><div>
-                                        <img src="belgium.jpg"></img>
+                                        <img src="../images/belgium.jpg"></img>
                                         <div>
                                             <p>Shell Belgium Grand Prix</p>
                                         </div>
@@ -157,7 +157,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=SAGP"><div>
-                                        <img src="singapore.jpg"></img>
+                                        <img src="../images/singapore.jpg"></img>
                                         <div>
                                             <p>Singapore Airlines Grand Prix</p>
                                         </div>
@@ -168,7 +168,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=RGP"><div>
-                                        <img src="russia.jpg"></img>
+                                        <img src="../images/russia.jpg"></img>
                                         <div>
                                             <p>Russian Grand Prix</p>
                                         </div>
@@ -177,7 +177,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=USGP"><div>
-                                        <img src="us.jpg"></img>
+                                        <img src="../images/us.jpg"></img>
                                         <div>
                                             <p>US Grand Prix</p>
                                         </div>
@@ -186,7 +186,7 @@
 
                                 <td>
                                     <a href="main_predict.php?race=JGP"><div>
-                                        <img src="japan.jpg"></img>
+                                        <img src="../images/japan.jpg"></img>
                                         <div>
                                             <p>Japanese Grand Prix</p>
                                         </div>

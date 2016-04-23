@@ -1,6 +1,6 @@
 
 body    {
-    background-image:url("kerb.jpg");
+    background-image:url("../images/kerb.jpg");
     background-attachment:fixed;
     /*background-position:top-right;*/
     color:white;
