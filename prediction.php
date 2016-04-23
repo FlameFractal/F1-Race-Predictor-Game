@@ -432,33 +432,24 @@ echo '
                         document.getElementById("btn_pr2").style.backgroundColor="transparent";
                         document.getElementById("btn_pr3").style.backgroundColor="transparent";
                         document.getElementById("p1").style.visibility="visible";
-                        document.getElementById("pr1").style.visibility="visible";
                         document.getElementById("p2").style.visibility="hidden";
-                        document.getElementById("pr2").style.visibility="hidden";
                         document.getElementById("p3").style.visibility="hidden";
-                        document.getElementById("pr3").style.visibility="hidden";
                     }
                     else if(Object.is(event.target,e[1]))   {
                         document.getElementById("btn_pr1").style.backgroundColor="transparent";
                         document.getElementById("btn_pr2").style.backgroundColor="black";
                         document.getElementById("btn_pr3").style.backgroundColor="transparent";
                         document.getElementById("p2").style.visibility="visible";
-                        document.getElementById("pr2").style.visibility="visible";
                         document.getElementById("p1").style.visibility="hidden";
-                        document.getElementById("pr1").style.visibility="hidden";
                         document.getElementById("p3").style.visibility="hidden";
-                        document.getElementById("pr3").style.visibility="hidden";
                     }
                     else if(Object.is(event.target,e[2]))   {
                         document.getElementById("btn_pr1").style.backgroundColor="transparent";
                         document.getElementById("btn_pr2").style.backgroundColor="transparent";
                         document.getElementById("btn_pr3").style.backgroundColor="black";
                         document.getElementById("p3").style.visibility="visible";
-                        document.getElementById("pr3").style.visibility="visible";
                         document.getElementById("p2").style.visibility="hidden";
-                        document.getElementById("pr2").style.visibility="hidden";
                         document.getElementById("p1").style.visibility="hidden";
-                        document.getElementById("pr1").style.visibility="hidden";
                     }
                 }
             </script>
