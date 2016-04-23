@@ -9,14 +9,14 @@
 
 
     <body>
-        <div id="heading"><h1>F1 Race Predictor Game!</h1></div>
+        <div id="heading"><h1>WELCOME</h1></div>
 
 <div id="images">
     <img src="racingline.jpg" id="logo" alt="Image could not be displayed"></img>
-    <div id="cars" onload="mainfunc()()"><img src="ferrari.jpg"  ></img></div>
+    <div id="cars" onload="mainfunc()()"><img src="ferrari2.png"  ></img></div>
     <div id="merc" onload="mainfunc()"><img src="mercedes.png" id="merc"></img></div>
     <div id="williams" onload="mainfunc2()"><img src="williams.png" id="williams"></img></div>
-    <div id="redbull" onload="mainfunc2()"><img src="redbull.jpg" id="redbull"></img></div>
+    <div id="redbull" onload="mainfunc2()"><img src="redbull.png" id="redbull"></img></div>
     <!-- <a id="continue" href="#outer">Continue</a> -->
       <button type="button" id="continue" >▼</button>
       
@@ -25,7 +25,7 @@
 
 <div id = "outer" class="outer">
     <div id="schedule">
-        <h1>Schedule</h1>
+        <!--<h1>Schedule</h1>-->
         <ol>
             <li>Australian GP</li>
             <li>Malaysian GP</li>
@@ -42,7 +42,7 @@
         </ol>
     </div>
     <div id = "inner">
-        <h3 id="log">Sign in to your account!</h3>
+        <!--<h3 id="log">Sign in</h3>-->
         
         <form name="myform" action="login.php" id = "forrm" method="post" onsubmit="return validate_form()">
             <ul>
@@ -171,7 +171,9 @@ $("button").click(function() {
         'slow');
 });
 </script>
-  
+<script>
+    
+</script>
 
 </body>
 </head>

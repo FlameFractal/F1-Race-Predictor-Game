@@ -1,9 +1,12 @@
 
 body    {
-    background-image:url("chequered-flag.jpg");
+    background-image:url("kerb.jpg");
     background-attachment:fixed;
+    /*background-position:top-right;*/
     color:white;
     background-repeat:repeat-y;
+    margin:0;
+    background-size:1366px 768px;
 
 }
 
@@ -46,14 +49,14 @@ div #inner h2  , #logout {
 div #stats  {
     position:absolute;
     border-style:inset outset outset inset;
-    border-color:red;
+    border-color:transparent;
     border-radius:5px;
     background-color:black;
-    opacity:0.7;
+    opacity:0.5;
     height:300px;
     width:300px;
-    top:5%;
-    left:220%;
+    top:-20%;
+    left:180%;
 }
 
 div #stats h3   {
@@ -85,7 +88,7 @@ div #races table tr td {
 
 div #races table tr td div  {
     
-    border-color:black;
+    border-color:transparent;
     border-style:solid;
     height:250px;
     width:250px;
@@ -93,9 +96,10 @@ div #races table tr td div  {
 
 div #races h3   {
     font-family:"Courier New";
-    font-color:white;
+    color:black;
     position:absolute;
     left:40%;
+    text-transform:uppercase;
 }
 
 div #races table tr td a div img  {
@@ -109,14 +113,21 @@ div #races table tr td a div div   {
     top:-52px;
     left:-3px;
     height:20%;
-    width:250px;
-    border-color:no-color;
+    width:247px;
+    border-color:transparent;
     opacity:0.7;
+    border-radius:5px;
     background-color:black;
 }
 
 div #races table tr td a div p {
     padding:5px;
+    text-decoration:none;
+}
+div#races a {
+    text-decoration:none;
+}
+div#races a:hover  {
     text-decoration:none;
 }
 
@@ -181,4 +192,22 @@ img {
 #wrapper{
     margin: 0 auto;
     //width: 1080px;
+}
+
+div#stats h4    {
+    position:relative;
+    top:30%;
+    left:3%;
+}
+
+#pts    {
+    position:absolute;
+    top:20%;
+    left:10%;
+}
+#pts:link   {
+    border-style:inset outset outset inset;
+    border-color:transparent;
+    background-color:#356094;
+    text-decoration:none;
 }

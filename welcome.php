@@ -31,12 +31,38 @@
 
                 echo "<h2>Welcome, ".$user_name."</h2>";
                 echo "<a id=\"logout\" href=\"logout.php\">Log Out</a>";
+                //echo "<a id='\"pts\" href=\"\">Points</a>";
+                
                 ?>
 
 
                 
                 <div id="stats">
                     <h3>Player Stats</h3>
+                    <?php
+                        $server="localhost";
+                        $username="root";
+                        $password="tiger";
+                        $pts=0;
+                        $conn=mysqli_connect($server,$username,$password,"dbms");
+                        if($conn->connect_error)   {
+                            echo 'Can\'t conncect';
+                        }
+                        else    {
+                            $query='select `points` from `users` WHERE user_name=\''.$user_name.'\';';
+                            $result=mysqli_query($conn,$query);
+                            if(mysqli_num_rows($result)==0) {
+                            
+                            }
+                            else    {
+                                while($data=$result->fetch_assoc()) {
+                                        $pts=$data['points'];
+                                }
+                                echo '<h4>Points Scored:'.$pts.'</h4>';
+                                echo '<h4>Games Played:</h4>';
+                            }
+                        }
+                    ?>
                 </div>
                 <div id="races">
                     <h3>Select a race to start predicting!</h3>
@@ -49,7 +75,7 @@
                                     <a href="main_predict.php?race=RAGP"><div>
                                         <img src="australia.jpg"></img>
                                         <div>
-                                            <p>Australian Grand Prix</p>
+                                            <p>Rolex Australian Grand Prix</p>
                                         </div>
                                     </div></a>
                                 </td>
@@ -59,7 +85,7 @@
                                     <a href="main_predict.php?race=PMGP"><div>
                                         <img src="malaysia.jpg"></img>
                                         <div>
-                                            <p>Malaysian Grand Prix</p>
+                                            <p>Petronas Malaysian Grand Prix</p>
                                         </div>
                                     </div></a>
                                 </td>
@@ -79,7 +105,7 @@
                                     <a href="main_predict.php?race=GABGP"><div>
                                         <img src="bahrain.jpg"></img>
                                         <div>
-                                            <p>Bahrain Grand Prix</p>
+                                            <p>Gulf Air Bahrain Grand Prix</p>
                                         </div>
                                     </div></a>
                                 </td>   
@@ -87,7 +113,7 @@
                                     <a href="main_predict.php?race=GPDM"><div>
                                         <img src="monaco.jpg"></img>
                                         <div>
-                                            <p>Monaco Grand Prix</p>
+                                            <p>Grand Prix du Monaco</p>
                                         </div>
                                     </div></a>
                                 </td>                                    
@@ -96,7 +122,7 @@
                                     <a href="main_predict.php?race=GPDC"><div>
                                         <img src="canada.jpg"></img>
                                         <div>
-                                            <p>Canadian Grand Prix</p>
+                                            <p>Grand Prix du Canada</p>
                                         </div>
                                     </div></a>
                                 </td> 
@@ -115,7 +141,7 @@
                                     <a href="main_predict.php?race=SBGP"><div>
                                         <img src="belgium.jpg"></img>
                                         <div>
-                                            <p>Belgium Grand Prix</p>
+                                            <p>Shell Belgium Grand Prix</p>
                                         </div>
                                     </div></a>
                                 </td>                                    
@@ -124,7 +150,7 @@
                                     <a href="main_predict.php?race=SAGP"><div>
                                         <img src="singapore.jpg"></img>
                                         <div>
-                                            <p>Singapore Grand Prix</p>
+                                            <p>Singapore Airlines Grand Prix</p>
                                         </div>
                                     </div></a>
                                 </td>  
@@ -153,7 +179,7 @@
                                     <a href="main_predict.php?race=JGP"><div>
                                         <img src="japan.jpg"></img>
                                         <div>
-                                            <p>Japan Grand Prix</p>
+                                            <p>Japanese Grand Prix</p>
                                         </div>
                                     </div></a>
                                 </td>

@@ -1,7 +1,14 @@
 <html>
     <head>
+        <link type="text/css" rel="stylesheet" href="results_style.css"/>
     </head>
     <body>
+        <div>
+        <a href="welcome.php">
+        <div id="home">
+            <h3>Home</h3>
+        </div>
+        </a>
         <?php
         session_start();
         $user_name=$_SESSION['user_name'];
@@ -10,57 +17,119 @@
         }
         $type=$_GET['win'];
         $race=$_GET['race'];
-        $pid=$_GET['practice'];
+        //$pid=$_GET['practice'];
         $server="localhost";
         $username="root";
         $password="tiger";
+        $lineup=array();
+        echo $type;
+        
+        $conn=mysqli_connect($server,$username,$password,"dbms");
+        if($conn->connect_error)  {
+            die('mysqli_error($conn)');
+            //header("location:www.google.com");
+        }
+        else    {
+            $sql='select `position`,`driver_name`,`id`,`team` from `races` r,`drivers` d WHERE r.driver_id=d.id AND r.Race_ID=\''.$race.'_R\'';
+            //echo $sql;
+            $results=mysqli_query($conn,$sql);
+            if(mysqli_num_rows($results)==0)  {
+                //header("location:www.google.com");
+                die('mysqli_error($conn)');
+            }
+            else    {
+                echo '<div id="results">';
+                echo '<table>';
+                echo '<thead>
+                        
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Driver Number</th>
+                            <th>Team</th>
+                        
+                        </thead>';    
+                while($data=$results->fetch_assoc()) {
+                    array_push($lineup,$data['driver_name']);
+                    echo "<tbody>
+                            <tr>
+                                <td>".$data['position']."</td>
+                                <td>".$data['driver_name']."</td>
+                                <td>".$data['id']."</td>
+                                <td>".$data['team']."</td>";
+                    echo '</tr>';
+                }
+                echo '</tbody>';
+                echo '</table>';
+                echo '</div>';
+            }
+        }
+        ?>
+        <?php
+        $query='select `points` from `users` WHERE `user_name`=\''.$_SESSION['user_name'].'\';';
+        $result=mysqli_query($conn,$query);
+        while($dat=$result->fetch_assoc())  {
+            $points=$dat['points'];
+        }
+        $tpoint=0;
         switch($type)   {
             case 'Winner':
-                            $temp=$_GET['driver'];
-                            echo '<h3>Your predicted winner is:</h3>'.$temp;
+                            $temp=$_POST['driver'];
+                            //echo 'Inside winner';
+                            //echo $lineup[0];
+                            //echo $temp;
+                            if($temp==$lineup[0])   {
+                                $tpoint=50;
+                                //echo $points;
+                                //echo $lineup[0];
+                            }    
                             break;
-            case 'Topten':  echo '<h3>Your predicted Top Ten is </h3>';
+            case 'Topten':  
+                            $pred=array();
                             $i=0;
-                            echo '<table>';
-                            echo '<thead>
-                                        <th>
-                                            <td>Position</td>
-                                            <td>Driver</td>
-                                        </th>
-                                    </thead>';
-                            echo '<tbody>';
-                            for($i=0;$i<10;$i++) {
-                                $value='driver'.$i;
-                                echo '<tr>';
-                                echo  '<td>'.($i+1).'</td>
-                                        <td>'.$_GET[$value].'</td>
-                                      </tr>';
+                            for(;$i<10;$i++)    {
+                                array_push($pred,$_POST['driver'.$i]);
                             }
-                            echo '</tbody
-                                </table>';
+                            for($i=0;$i<10;$i++)    {
+                                for($j=0;$j<10;$j++)    {
+                                    if($lineup[i]==$pred[j])    {
+                                        $difference=abs($i-$j);
+                                        $tpoint+=(45-($difference*5));
+                                        break;
+                                    }
+                                }
+                            }
                             break;
-            case 'Podium':  echo '<h3>Your predicted Podium Finishers are</h3>';
-                            $i=0;
-                            echo '<table>';
-                            echo '<thead>
-                                        <th>
-                                            <td>Position</td>
-                                            <td>Driver</td>
-                                        </th>
-                                    </thead>';
-                            echo '<tbody>';
+            case 'Podium':  $i=0;
+                            $pred=array();
+                            $j=0;
+                            for(;$i<3;$i++) {
+                                array_push($pred,$_GET['driver'.$i]);
+                            }
                             for($i=0;$i<3;$i++) {
-                                $value='driver'.$i;
-                                echo '<tr>
-                                        <td>'.($i+1).'</td>
-                                        <td>'.$_GET[$value].'</td>
-                                      </tr>';
+                                for(;$j<3;$j++) {
+                                    if($lineup[i]==$pred[j])    {
+                                        $difference=abs($i-$j);
+                                        $tpoint+=(45-($difference*5));
+                                    }
+                                }
                             }
-                            echo '</tbody
-                                </table>';
                             break;
                             
         }
+        //print_r($_SESSION);
+        $points+=$tpoint;
+        $query='UPDATE `users` SET `points`='.$points.' WHERE user_name=\''.$_SESSION['user_name'].'\';';
+        //echo $query;
+        $result=mysqli_query($conn,$query);
+        
+        $query='INSERT INTO `points` VALUES (\''.$_SESSION['user_name'].'\',\''.$race.'\');';
+        //echo $query;
+        $result=mysqli_query($conn,$query);
+        echo '<div id="point">';
+        echo '<h3>Points scored:'.$tpoint.'</h3>';
+        echo '</div>';
+        //header("location:welcome.php");
         ?>
+        </div>
     </body>
 </html>

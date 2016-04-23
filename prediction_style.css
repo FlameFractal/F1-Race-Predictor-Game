@@ -1,7 +1,8 @@
 body    {
-    background-image:url("chequered-flag.jpg");
+    background-image:url("kerb.jpg");
     background-repeat:no-repeat;
     background-attachment:fixed;
+    background-size: 1366px 768px;
 }
 
 h2  {
@@ -9,6 +10,7 @@ h2  {
     left:38%;
     text-align:center;
     color:white;
+    font-family:"Courier New";
 }
 
 div#practice_sessions ul  {
@@ -21,14 +23,23 @@ div#practice_sessions ul  {
 div#practice_sessions ul li button{
     color:white;
     border-style:inset outset outset inset;
-    border-color:red;
+    border-color:black;
     border-radius:5px;
     margin:20px;
     padding:20px;
     text-decoration:none;
-    background-color:black;
+    background-color:transparent;
+    
 }
+
+div#practice_sessions button:active {
+    background-color:black
+}
+
+
+
 div#practice_sessions ul li   {
+    font-family:"Courier New";
     display:inline;
 }
 
@@ -91,36 +102,42 @@ div#practice_table table#p1 thead th  {
     color:red;
     padding:10px;
     text-align:center;
+    font-family:"Lucida Console";
 }
 
 div#practice_table table#p2 thead th  {
     color:red;
     padding:10px;
     text-align:center;
+    font-family:"Lucida Console";
 }
 
 div#practice_table table#p3 thead th  {
     color:red;
     padding:10px;
     text-align:center;
+    font-family:"Lucida Console";
 }
 
 div#practice_table table#p1 tbody tr td    {
     color:white;
     padding:10px 15px 10px 15px;
     text-align:center;
+    font-family:"Courier New";
 }
 
 div#practice_table table#p2 tbody tr td    {
     color:white;
     padding:10px 15px 10px 15px;
     text-align:center;
+    font-family:"Courier New";
 }
 
 div#practice_table table#p3 tbody tr td    {
     color:white;
     padding:10px 15px 10px 15px;
     text-align:center;
+    font-family:"Courier New";
 }
 
 div#predict {
@@ -146,8 +163,41 @@ div #predict form input {
     border-style:inset outset outset inset;
     border-color:black;
     border-radius:5px;
+    font-family:"Courier New";
+}
+
+div#predict h3  {
+    font-family:"Courier";
 }
 
 #wrapper{
     margin: 0 auto;
+}
+
+div#results     {
+    position:absolute;
+    top:20%;
+    left:30%;
+    
+    }
+
+div#results table {
+    border-color:red;
+    border-style:inset outset outset inset;
+    background-color:black;
+    opacity:0.9;
+    
+}
+
+div#results th  {
+    text-align:center;
+    color:red;
+    font-family:"Courier New";
+    
+}
+
+div#results tr td   {
+    text-align:center;
+    color:red;
+    font-family:"Courier New";
 }

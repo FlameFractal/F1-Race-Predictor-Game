@@ -43,11 +43,11 @@
         switch($tag)    {
             case 'RAGP':
             
-                            echo 'Race selected is australia';
+                            //echo 'Race selected is australia';
                             echo "
                             <div>
                                 <h3>Albert Park Circuit</h3>
-                                <img src=\"albertpark.jpg\" style=\"-moz-border-image:url(australia.jpg) 10 round;\"></img>
+                                <img src=\"Albert.png\" style=\"-moz-border-image:url(australia.jpg) 10 round;\"></img>
                             </div>";
                             break;
             case 'PMGP':    echo "

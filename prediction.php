@@ -16,7 +16,7 @@
             }
             $type=$_GET['win'];
             $race=$_GET['race'];
-            $pid=$_GET['practice'];
+            //$pid=$_GET['practice'];
             $server="localhost";
             $username="root";
             $password="tiger";
@@ -24,6 +24,9 @@
             $temp2=$race."_PR2";
             $temp3=$race."_PR3";
             $conn=mysqli_connect($server,$username,$password,"dbms");
+            $que='select * from `points` WHERE user=\''.$_SESSION['user_name'].'\';';
+            $result=mysqli_query($conn,$que);
+            
             switch($race)   {
                 case 'RAGP':
                             echo '
@@ -74,20 +77,59 @@
                             <h2>Japanese Grand Prix</h2>';
                             break;
             }
-            echo "<div id=\"predict\">";
-            $lin="results.php?race=".$race."&win=".$type;
-            switch($type)   {
-                case 'Winner':  
-                                $query1='select `driver_name` from `table 6` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp1.'\'ORDER BY `driver_name`;';
+            if(mysqli_num_rows($result)!=0) {
+                $que='select * from `points` WHERE gp=\''.$race.'\';';
+                echo $que;
+                $res=mysqli_query($conn,$que);
+            }
+                if(mysqli_num_rows($res)!=0)    {
+                    $query='select `position`,`driver_name`,`id`,`team` from `races` r,`drivers` d WHERE r.driver_id=d.id AND r.Race_ID=\''.$race.'_R\';'; 
+                    $result=mysqli_query($conn,$query);
+                    if(mysqli_num_rows($result)==0)    {
+                        echo 'mysqli_error($conn)';
+                    }
+                else    {
+                        echo '<div id="results">';
+                        echo '<table>';
+                        echo '<thead>
+                        
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Driver Number</th>
+                            <th>Team</th>
+                        
+                        </thead>';
+                        while($data=$result->fetch_assoc())    {
+                            echo "<tbody>
+                            <tr>
+                                <td>".$data['position']."</td>
+                                <td>".$data['driver_name']."</td>
+                                <td>".$data['id']."</td>
+                                <td>".$data['team']."</td>";
+                        echo '</tr>';
+                    }   
+                    echo '</tbody>';
+                    echo '</table>';
+                    echo '</div>';
+                    }
+                }
+               
+                else    {
+            
+                echo "<div id=\"predict\">";
+                $lin="results.php?race=".$race."&win=".$type;
+                switch($type)   {
+                    case 'Winner':  
+                                    $query1='select `name` from `table 6` t, `drivers` d WHERE t.driver_id=d.id AND `session_id`=\''.$temp1.'\'ORDER BY `name`;';
                                 $result=mysqli_query($conn,$query1);
                                 if(mysqli_num_rows($result)!=0) {
                                     echo "<h3>Enter your predicted winner</h3>";
-                                    echo "<form action=\"\" type=\"GET\" onsubmit=\"formfunc()\">";
+                                    echo "<form action=".$lin." method=\"post\">";
                                     echo "
                                          <select name=\"driver\" onchange=\"mfunction()\">";
                                     echo "<option value=\"\"></option>";
                                     while($test=$result->fetch_assoc()) {
-                                        echo "<option value=".$test['driver_name']."style=\"visibility:true;\">".$test['driver_name']."</option>";
+                                        echo "<option value=\"".$test['name']."\"style=\"visibility:true;\">".$test['name']."</option>";
                                     }
                                     echo "</select>";
                                     echo "<br/>";
@@ -102,11 +144,11 @@
                                 break;
                 case 'Podium':  
                                 $i=0;
-                                $query1='select `driver_name` from `table 6` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp1.'\'ORDER BY `driver_name`;';
+                                $query1='select `name` from `table 6` t, `drivers` d WHERE t.driver_id=d.id AND `session_id`=\''.$temp1.'\'ORDER BY `name`;';
                                 $result=mysqli_query($conn,$query1);
                                 if(mysqli_num_rows($result)!=0) {
                                     echo "<h3>Enter your predicted Podium finishers</h3>";
-                                    echo "<form type=\"GET\" onsubmit=\"formfunc()\">";
+                                    echo "<form method=\"post\" action=".$lin.">";
                                     for($i=0;$i<3;$i++) {
                                              $value="driver".$i;
                                         echo "
@@ -116,8 +158,8 @@
                                         $result=mysqli_query($conn,$query1);    
                                         while($test=$result->fetch_assoc()) {
                                             //$r=$i+1;
-                                            echo $test['driver_name'];
-                                            echo "<option value=".$test['driver_name']." style=\"visibility:true;\">".$test['driver_name']."
+                                            echo $test['name'];
+                                            echo "<option value=".$test['name']." style=\"visibility:true;\">".$test['name']."
                                             </option>;";
                                         }                                    
                                         echo "</select>";
@@ -135,7 +177,7 @@
                                 break;
                 case 'Topten':  $i=0;
                                 
-                                $query1='select `driver_name` from `table 6` t, `drivers` d WHERE t.driver_id=d.driver_id AND `session_id`=\''.$temp1.'\'ORDER BY `driver_name`;';
+                                $query1='select `name` from `table 6` t, `drivers` d WHERE t.driver_id=d.id AND `session_id`=\''.$temp1.'\'ORDER BY `name`;';
                                 $result=mysqli_query($conn,$query1);
                                 //echo $query1;
                                 //echo 'mysqli_num_rows($result)';
@@ -144,7 +186,7 @@
                                 
                                 if(mysqli_num_rows($result)!=0) {
                                     echo "<h3>Enter your predicted Top Ten</h3>";
-                                    echo "<form action=\"\" type=\"GET\" onsubmit=\"formfunc()\" >";
+                                    echo "<form action=".$lin." method=\"post\" >";
                                     for($i=0;$i<10;$i++)    {
                                         $test=0;
                                         
@@ -156,8 +198,8 @@
                                         $result=mysqli_query($conn,$query1);    
                                         while($test=$result->fetch_assoc()) {
                                             //$r=$i+1;
-                                            echo $test['driver_name'];
-                                            echo "<option value=".$test['driver_name']." style=\"visibility:true;\">".$test['driver_name']."
+                                            echo $test['name'];
+                                            echo "<option value=".$test['name']." style=\"visibility:true;\">".$test['name']."
                                             </option>;";
                                         }                                    
                                         echo "</select>";
@@ -179,9 +221,8 @@
             echo "</div>";
             $lin="prediction.php?race=".$race."&win=".$type;
             //echo $lin;
-            
-        ?>
-            <div id="practice_sessions">
+             echo '   
+             <div id="practice_sessions">
                 <ul>
                     <li>
                     <button onclick="f(event)">
@@ -199,7 +240,32 @@
                     </button>
                     </li>
                 </ul>
-            </div>
+            </div> ';       
+        
+        
+        
+        
+        } 
+        ?>
+           <!-- <div id="practice_sessions">
+                <ul>
+                    <li>
+                    <button onclick="f(event)">
+                        Practice 1
+                    </button>
+                    </li>
+                    <li>
+                    <button onclick="f(event)">
+                        Practice 2
+                    </button>
+                    </li>
+                    <li>
+                    <button onclick="f(event)">
+                        Practice 3
+                    </button>
+                    </li>
+                </ul>
+            </div>-->
             <?php
                
                 if(!$conn)  {
@@ -209,9 +275,9 @@
                     echo 'success!';
                     
                    // echo $temp;
-                    $query="SELECT `position`,`driver_name`,`lap_time`,`gap` FROM `table 6` t,`drivers` d WHERE t.driver_id=d.driver_id AND session_id='".$temp1."' ORDER BY `position` ASC;";
-                    $query1="SELECT `position`,`driver_name`,`lap_time`,`gap` FROM `table 6` t,`drivers` d WHERE t.driver_id=d.driver_id AND session_id='".$temp2."' ORDER BY `position` ASC;";
-                    $query2="SELECT `position`,`driver_name`,`lap_time`,`gap` FROM `table 6` t,`drivers` d WHERE t.driver_id=d.driver_id AND session_id='".$temp3."' ORDER BY `position` ASC;";
+                    $query="SELECT `position`,`name`,`lap_time`,`gap` FROM `table 6` t,`drivers` d WHERE t.driver_id=d.id AND session_id='".$temp1."' ORDER BY `position` ASC;";
+                    $query1="SELECT `position`,`name`,`lap_time`,`gap` FROM `table 6` t,`drivers` d WHERE t.driver_id=d.id AND session_id='".$temp2."' ORDER BY `position` ASC;";
+                    $query2="SELECT `position`,`name`,`lap_time`,`gap` FROM `table 6` t,`drivers` d WHERE t.driver_id=d.id AND session_id='".$temp3."' ORDER BY `position` ASC;";
                     //echo $query;
                     $result=mysqli_query($conn,$query);
                     $result1=mysqli_query($conn,$query1);
@@ -252,7 +318,7 @@
                             echo '
                                     <tr>
                                         <td>'.$data["position"].'</td>
-                                        <td>'.$data["driver_name"].'</td>
+                                        <td>'.$data["name"].'</td>
                                         <td>'.$data["lap_time"].'</td>
                                         <td>'.$data["gap"].'</td>
                                     </tr>
@@ -284,7 +350,7 @@
                             echo '
                                     <tr>
                                         <td>'.$data["position"].'</td>
-                                        <td>'.$data["driver_name"].'</td>
+                                        <td>'.$data["name"].'</td>
                                         <td>'.$data["lap_time"].'</td>
                                         <td>'.$data["gap"].'</td>
                                     </tr>
@@ -316,7 +382,7 @@
                             echo '
                                     <tr>
                                         <td>'.$data["position"].'</td>
-                                        <td>'.$data["driver_name"].'</td>
+                                        <td>'.$data["name"].'</td>
                                         <td>'.$data["lap_time"].'</td>
                                         <td>'.$data["gap"].'</td>
                                     </tr>
@@ -368,6 +434,9 @@
                     window.alert(e[0]);*/
                     if(Object.is(event.target,e[0]))    {
                         //window.alert("button 1 has been pressed");
+                        /*style.background-color="white";
+                        e[0].style.color="black";*/
+                        //e[0].style.background-color="black";
                         document.getElementById("p1").style.visibility="visible";
                         document.getElementById("pr1").style.visibility="visible";
                         document.getElementById("p2").style.visibility="hidden";
@@ -393,12 +462,12 @@
                     }
                 }
             </script>
-            <script>
+            <!--<script>
                 function formfunc() {
                     window.alert("Form submitted");
                     window.location.href="results.php?race=USGP&win=Podium";
                 }
-            </script>
+            </script>-->
 
     </body>
 </html>

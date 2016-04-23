@@ -1,9 +1,11 @@
 body    {
+    /*background-image:url("index.jpe");*/
     background-repeat:no-repeat;
-    background-position:right top;
+    /*background-position:right top;*/
+   background-attachment:fixed;
     background-color:white;
     z-index:-1;
-    zoom:100%;
+    
     overflow-x: hidden;
 }
 
@@ -21,11 +23,11 @@ div #images {
 #heading{
     position: absolute;
     margin: auto;
-    left: 22%;
+    left: 18%;
     top: 40%;
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Courier New";
-    color: blue;
+    color: white;
     visibility: hidden;
 }
 
@@ -34,10 +36,10 @@ img#logo   {
     /*height:30em;
     width:84em;*/
     width:102%;
-    opacity:0.5;
+    opacity:1.0;
     left:-310px;
     top:-310px;
-    
+    z-index:-1;
 }
 
 div #cars    {
@@ -55,7 +57,7 @@ div #cars    {
 div #cars img   {
     height:80px;
     width:100%;
-    opacity:0.6;
+    opacity:0.5;
     
 }
 div #merc   {
@@ -78,7 +80,7 @@ div #williams   {
     top:40%;
     left:-30%;
     opacity:1.0;
-    z-index:-1;
+    
     width:20%;
 }
 
@@ -117,20 +119,27 @@ div #outer  {
 
 div #inner  {
     position:absolute;
+    background-image:url("monzabank.jpg");
+    background-position:top-left;
+    
     /*float:center;*/
     width:300px;
     top:130%;
     left:40%;
-    border-style:solid;
+    border-style:inset outset outset inset;
     border-color:black;
-    border-width:1px;
+    border-width:2px;
     border-radius:2px;
     padding:50px;
+    
 }
 
 div #inner h3   {
     top:5%;
     left:5%;
+    color:white;
+    font-family:"Courier New";
+    text-transform:uppercase;
 }
 div #logo   {
     position:relative;
@@ -141,11 +150,14 @@ form #forrm {
     position:relative;
     margin-top:300px;
     margin-left:300px;
+    color:white;
 }
 
 div #schedule   {
-    background-color:grey;
-    top:114%;
+    background-image:url("banking.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    top:115.5%;
     left:0%;
     position:absolute;
     float:right;
@@ -156,9 +168,9 @@ div #schedule   {
     border-width:1px;
     border-bottom-color:white;
     border-right-color:white;
-    height:70%;
-    width:20%;
-    overflow:auto;
+    height:14%;
+    width:100%;
+    /*overflow:auto;*/
 }
 
 div #schedule h1    {
@@ -171,17 +183,19 @@ div #schedule h1    {
 div #schedule ol    {
     text-align: justify-all;
     position:absolute;
-    float:left;
-    top:10%;
+   
+    top:20%;
 }
 
 div #schedule ol li {
+    display:inline;
     text-align: justify-all;
     font-family:Georgia;
-    font-size:25px;
-    color:red;
+    font-size:15px;
+    color:white;
+    top:10%;
     position:relative;
-    left:30%;
+    left:0%;
     margin:10px;
 }
 
@@ -220,6 +234,8 @@ form li{
 
 label{
     display: block;
+    color:white;
+    font-family:"Courier New";
 }
 
 form ul{

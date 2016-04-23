@@ -1,0 +1,78 @@
+body    {
+      background-image:url("kerb.jpg");
+      background-size:1366px 768px;
+}
+div {
+    position:relative;
+}
+
+div#point   {
+    position:absolute;
+    top:50%;
+    left:80%;
+}
+div#point h3  {
+    font-family:"Courier";
+    text-transform:uppercase;
+    color:red;
+    position:relative;
+    top:70%;
+    left:35%;
+    
+}
+
+div {
+    position:relative;
+}
+div#results {
+    position:absolute;
+    top:30%;
+    left:30%;
+}
+
+div#results table   {
+    border-color:maroon;
+    border-style:outset;
+    border-width:4px;
+    border-collapse:none;
+    background-color:black;
+    opacity:0.9;
+}
+
+div#results table th {
+    text-align:center;
+    padding:5px;
+    color:yellow;
+    font-family:"Courier New";
+    
+}
+div#results table tr td   {
+    text-align:center;
+    padding:5px;
+    color:yellow;
+    font-family:"Courier New";
+}
+
+div#home    {
+    position:absolute;
+    top:0%;
+    border-style:inset outset outset inset;
+    border-color:red;
+    padding:5px;
+    left:2%;
+  
+}
+
+div#home h3 {
+    text-align:center;
+    text-transform:uppercase;
+    padding:5px;
+    color:red;
+    }
+a:hover div#home  {
+    background-color:white;
+    color:black;
+    border-color:black;
+    
+}
+    

@@ -903,7 +903,7 @@ CREATE TABLE IF NOT EXISTS `races` (
 -- Dumping data for table `races`
 --
 
-INSERT INTO `races` (`position`, `driver_id`, `driver_name`, `session_id`) VALUES
+INSERT INTO `races` (`position`, `driver_id`, `driver_name`, `Race_ID`) VALUES
 (1, 44, 'LEWIS HAMILTON', 'RAGP_R'),
 (2, 6, 'NICO ROSBERG', 'RAGP_R'),
 (3, 5, 'SEBASTIAN VETTEL', 'RAGP_R'),
