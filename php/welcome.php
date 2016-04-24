@@ -23,7 +23,7 @@
                 $user_name=$_SESSION['user_name'];
 
                 if (!$_SESSION['user_name']) {
-                    header("location:php/index.php");
+                    header("location:index.php");
                 }
 
                     // foreach ($_SESSION as $key=>$val)
