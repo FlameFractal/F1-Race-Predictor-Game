@@ -92,7 +92,7 @@
             //window.alert("I now is:"+i);
             function moving()   {
 
-                if(8*i==2200) {
+                if(8*i==2600) {
                     clearInterval(id);
                     document.getElementById("cars").style.visibility="hidden";
                     elem.style.animationDelay="1s";
@@ -145,7 +145,7 @@
             var i=0;
             var id=setInterval(moving,1);
             function moving()   {
-                if(6*i==3900)   {
+                if(6*i==3930)   {
                     clearInterval(id);
                     element.style.visibility="hidden";
                     red.style.visibility="hidden";
