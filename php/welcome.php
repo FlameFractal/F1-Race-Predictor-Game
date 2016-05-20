@@ -44,8 +44,8 @@
                     <?php
                     $server="localhost";
                     $username="root";
-                    $password="tiger";
-                    $database="dbms";
+                    $password="password";
+                    $database="f1";
                     $pts=0;
                     $games=0;
                     $conn=mysqli_connect($server,$username,$password,$database);

@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$servername="localhost";
-$name="root";
-$password="tiger";
-$database="dbms";
+$server="localhost";
+$username="root";
+$password="password";
+$database="f1";
 
 $email=$_POST["email"];
 $pass=$_POST["pass"];
@@ -16,7 +16,7 @@ if(empty($email)&&empty($pass)) {
 }
 
 
-$conn=new mysqli($servername,$name,$password,$database);
+$conn=new mysqli($server,$username,$password,$database);
 
 if($conn->connect_error){
 	die("Connection failed:".$conn->connect_error);
@@ -29,7 +29,7 @@ else{
 		$_SESSION['password']=$pass;
 		echo "<br>You're not a user, please sign-up!";
 		echo "<br>Redirecting back to Sign Up page !";
-		header('refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/php/signup_form.php');
+		header('refresh:2; url=signup_form.php');
 	echo mysqli_error($conn);
 }
 else{
@@ -37,7 +37,7 @@ else{
 	$result=mysqli_query($conn,$sql1);
 	if(mysqli_num_rows($result)==0) {
 		$_SESSION["wrong_password"]=TRUE;
-		header("refresh:2; url=http://127.0.0.1/F1-Race-Predictor-Game/index.php#outer");
+		header("refresh:2; url=index.php#outer");
 		echo "<br><br>Wrong user name or password!";
 		echo "<br>Redirecting back to sign in page!.";
 }

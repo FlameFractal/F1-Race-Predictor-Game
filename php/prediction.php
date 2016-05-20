@@ -19,8 +19,8 @@
             //$pid=$_GET['practice'];
             $server="localhost";
             $username="root";
-            $password="tiger";
-            $database="dbms";
+            $password="password";
+            $database="f1";
             $temp1=$race."_PR1";
             $temp2=$race."_PR2";
             $temp3=$race."_PR3";

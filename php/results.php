@@ -21,8 +21,8 @@
         //$pid=$_GET['practice'];
         $server="localhost";
         $username="root";
-        $password="tiger";
-        $database="dbms";
+        $password="password";
+        $database="f1";
         $lineup=array();
         
         $conn=mysqli_connect($server,$username,$password,$database);

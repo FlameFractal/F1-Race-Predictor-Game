@@ -30,8 +30,8 @@
 	}
 	$server="localhost";
 	$username="root";
-	$password="tiger";
-	$database="dbms";
+	$password="password";
+	$database="f1";
 	
 	$conn=mysqli_connect($server,$username,$password,$database);
 
