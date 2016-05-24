@@ -2,7 +2,7 @@
 
 CSD202 - Database Management System 's  project 
 
-Predict winner/podium/top 10 of 12 F1 (2015)  GP's and score points.
+Predict winner/podium-finish/top-ten of 2015 Formula 1 GP and score points.
 
 [Link](http://vish.netne.net/F1-Race-Predictor-Game/)
 
